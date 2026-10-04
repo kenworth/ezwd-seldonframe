@@ -1,0 +1,16 @@
+ARG BASE_IMAGE=seldonframe-ezwd:photos-v8-voice-playback-20261004
+FROM ${BASE_IMAGE} AS build
+WORKDIR /app
+ENV NODE_OPTIONS="" NEXT_TELEMETRY_DISABLED=1 NEXT_PUBLIC_APP_URL=https://ai.ezwderp.com
+COPY packages/crm/src/db/index.ts packages/crm/src/db/index.ts
+COPY packages/crm/src/db/local-pool.ts packages/crm/src/db/local-pool.ts
+COPY packages/crm/tests/unit/db/local-pool.spec.ts packages/crm/tests/unit/db/local-pool.spec.ts
+RUN pnpm --filter @seldonframe/crm exec node --import tsx --test tests/unit/db/local-pool.spec.ts tests/unit/agents/voice/run-voice-call.spec.ts
+RUN rm -rf packages/crm/.next && pnpm build --force
+FROM ${BASE_IMAGE}
+RUN rm -rf /app/packages/crm/.next
+COPY --from=build /app/packages/crm/.next /app/packages/crm/.next
+COPY --from=build /app/packages/crm/src/db/index.ts /app/packages/crm/src/db/index.ts
+COPY --from=build /app/packages/crm/src/db/local-pool.ts /app/packages/crm/src/db/local-pool.ts
+COPY --from=build /app/packages/crm/tests/unit/db/local-pool.spec.ts /app/packages/crm/tests/unit/db/local-pool.spec.ts
+LABEL org.ezwebdeals.database-pooling="source-v1"

@@ -24,9 +24,14 @@ sources or compiled chunks, tests, build logs and a compose backup for rollback.
 | `seldonframe-ezwd:photos-v8-voice-delay-*` | voice startup ordering fix |
 | `seldonframe-ezwd:photos-v8-voice-playback-*` | goodbye/playback: wait for `output_audio_buffer.stopped` before hanging up |
 
+| `seldonframe-ezwd:pooling-source-v1-20261004` | shared local database WebSocket pool compiled from source; retains customized base image |
+
 ## Dated patch directories
 
 - `voice-fix-20261002/` — voice init/persona + route fixes
 - `voice-delay-20261004/` — startup ordering
 - `voice-goodbye-20261004/` — goodbye audio playback (see its `CHANGELOG.txt` for the confirmed
   timeline and the 30-second missing-event fallback)
+
+- [database-pooling-20261004/](database-pooling-20261004/README.md) — source overlay, Dockerfile,
+  pooling regression test, database smoke check, validation results, and corrected external volume mapping.

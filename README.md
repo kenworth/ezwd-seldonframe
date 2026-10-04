@@ -1,8 +1,8 @@
 # ezwd-seldonframe
 
 Deployment configuration **and runtime patch layer** for the EZwebdeals SeldonFrame instance
-(`ai.ezwderp.com`). This repo does **not** contain the SeldonFrame application source — it contains
-everything we changed *around* and *inside* the vendor's published image.
+(`ai.ezwderp.com`). This repo contains deployment configuration and source overlays for our customized image,
+including the database pooling fix. It does **not** contain the full SeldonFrame source tree.
 
 ## Upstream
 
@@ -12,7 +12,7 @@ everything we changed *around* and *inside* the vendor's published image.
 | Upstream repo | https://github.com/seldonframe/seldonframe |
 | Upstream HEAD at snapshot | `3f386a221849` (2026-08-24T09:53:17Z) |
 | Latest upstream release | v1.1.0 |
-| Image we run | `ghcr.io/seldonframe/seldonframe:1.1.0` + our patch layer |
+| Image we run | `seldonframe-ezwd:pooling-source-v1-20261004` (custom build) |
 | License | **AGPL-3.0** (dual-licensed; see upstream `LICENSING.md`) |
 
 ### AGPL note — read before making this repo private-and-closed
@@ -68,6 +68,14 @@ three things without editing upstream source:
 3. **Image harvesting on keyless fetch** — the direct-fetch fallback returned markdown only, so
    scraped `og:image` / site photos were dropped. Patch returns html + ogImage as well.
 
+## Source-based database pooling
+
+The local database now uses a shared, bounded WebSocket pool, compiled into the app.
+See [the source overlay, build recipe, tests, and storage/rollback notes](patches/database-pooling-20261004/README.md).
+The temporary compiled-code pooling transformer is no longer required. The customized
+base image must be available locally; this repository does not publish an image.
+The Compose file pins the original PostgreSQL volume as external.
+
 ## Deploy / rollback
 
 ```bash
@@ -84,7 +92,8 @@ docker compose up -d --no-deps --wait app
 ```
 
 Do **not** restore a whole `docker-compose.yml.before-*` backup blindly — later work would be lost.
-Change only the image tag.
+Retain the corrected external database volume. For pooling rollback, follow the
+[patch-specific instructions](patches/database-pooling-20261004/README.md).
 
 ## Patch inventory
 

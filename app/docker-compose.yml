@@ -18,7 +18,7 @@ services:
     - -c
     - wal_level=logical
     volumes:
-    - fubbrjt4nkczuv0wjcyitkan_pgdata:/var/lib/postgresql/data
+    - fubbrjt4nkczuv0wjcyitkan-pgdata:/var/lib/postgresql/data
     healthcheck:
       test:
       - CMD-SHELL
@@ -117,7 +117,8 @@ services:
     - .env
   app:
     cpu_shares: 4096
-    image: seldonframe-ezwd:photos-v8-voice-playback-20261004
+    image: seldonframe-ezwd:pooling-source-v1-20261004
+    pull_policy: never
     restart: unless-stopped
     command:
     - sh
@@ -239,8 +240,9 @@ services:
     volumes:
     - ./ops/ezwd-origin-patch.js:/app/ezwd-origin-patch.js:ro
 volumes:
-  fubbrjt4nkczuv0wjcyitkan_pgdata:
-    name: fubbrjt4nkczuv0wjcyitkan_pgdata
+  fubbrjt4nkczuv0wjcyitkan-pgdata:
+    name: fubbrjt4nkczuv0wjcyitkan_fubbrjt4nkczuv0wjcyitkan-pgdata
+    external: true
 networks:
   fubbrjt4nkczuv0wjcyitkan:
     name: fubbrjt4nkczuv0wjcyitkan

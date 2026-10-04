@@ -1,9 +1,16 @@
 # Upgrade safety — what we changed and why it survives upgrades
 
-**Rule:** nothing we did lives *inside* a container. Every change is one of:
-a database row (the Postgres volume), a Coolify environment variable that is also
-referenced in the compose, a file on the VPS host, or a Traefik config file.
-Containers can be rebuilt, upgraded and replaced freely.
+Changes live in the persistent database, Coolify configuration, host files, or the
+custom application image. Recreating the same image preserves its source changes;
+replacing it with an upstream image does not. Source overlays must be carried
+forward and tested when rebuilding for an upgrade.
+
+The database pooling fix is now compiled from source. See
+[its build and validation instructions](../patches/database-pooling-20261004/README.md).
+Keep `app/docker-compose.yml` on the custom image with `pull_policy: never` while
+using a local image. Preserve the explicit external PostgreSQL volume name and
+verify the generated Coolify Compose resolves to that same existing volume before
+deployment. The temporary pooling runtime transformer is no longer used.
 
 ## Persistence map
 
