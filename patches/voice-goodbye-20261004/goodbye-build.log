@@ -1,0 +1,866 @@
+
+> seldon-frame@0.1.0 build /app
+> turbo run build
+
+
+Attention:
+Turborepo now collects completely anonymous telemetry regarding usage.
+This information is used to shape the Turborepo roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://turborepo.dev/docs/telemetry
+
+• turbo 2.8.20
+
+   • Packages in scope: @seldonframe/cli, @seldonframe/core, @seldonframe/crm, @seldonframe/payments
+   • Running build in 4 packages
+   • Remote caching disabled
+
+@seldonframe/cli:build: cache miss, executing a15358eab4e7e40f
+@seldonframe/core:build: cache miss, executing de9bf546fb4f8814
+@seldonframe/payments:build: cache miss, executing 4b996162db3bf76c
+@seldonframe/payments:build: 
+@seldonframe/payments:build: > @seldonframe/payments@0.1.0 build /app/packages/payments
+@seldonframe/payments:build: > tsc -p tsconfig.json --noEmit
+@seldonframe/payments:build: 
+@seldonframe/core:build: 
+@seldonframe/core:build: > @seldonframe/core@0.1.0 build /app/packages/core
+@seldonframe/core:build: > tsc -p tsconfig.json --noEmit
+@seldonframe/core:build: 
+@seldonframe/cli:build: 
+@seldonframe/cli:build: > @seldonframe/cli@0.1.0 build /app/packages/cli
+@seldonframe/cli:build: > tsc -p tsconfig.json
+@seldonframe/cli:build: 
+@seldonframe/crm:build: cache miss, executing 37dc95f07793009d
+@seldonframe/crm:build: 
+@seldonframe/crm:build: > @seldonframe/crm@0.1.0 build /app/packages/crm
+@seldonframe/crm:build: > bash scripts/check-use-server.sh src && next build
+@seldonframe/crm:build: 
+@seldonframe/crm:build: ✓ All 'use server' files export only async functions / types.
+@seldonframe/crm:build: Discovering workflow directives 29933ms
+@seldonframe/crm:build: Created steps bundle 379ms
+@seldonframe/crm:build: Created intermediate workflow bundle 356ms
+@seldonframe/crm:build: Creating webhook route
+@seldonframe/crm:build: Creating manifest...
+@seldonframe/crm:build: Created manifest with 7 steps, 1 workflow, and 0 classes 29ms
+@seldonframe/crm:build: ▲ Next.js 16.2.1 (Turbopack)
+@seldonframe/crm:build: - Experiments (use with caution):
+@seldonframe/crm:build:   · serverActions
+@seldonframe/crm:build: 
+@seldonframe/crm:build:   Creating an optimized production build ...
+@seldonframe/crm:build: Turbopack build encountered 1 warnings:
+@seldonframe/crm:build: ./packages/crm/next.config.ts
+@seldonframe/crm:build: Encountered unexpected file in NFT list
+@seldonframe/crm:build: A file was traced that indicates that the whole project was traced unintentionally. Somewhere in the import trace below, there are:
+@seldonframe/crm:build: - filesystem operations (like path.join, path.resolve or fs.readFile), or
+@seldonframe/crm:build: - very dynamic requires (like require('./' + foo)).
+@seldonframe/crm:build: To resolve this, you can
+@seldonframe/crm:build: - remove them if possible, or
+@seldonframe/crm:build: - only use them in development, or
+@seldonframe/crm:build: - make sure they are statically scoped to some subfolder: path.join(process.cwd(), 'data', bar), or
+@seldonframe/crm:build: - add ignore comments: path.join(/*turbopackIgnore: true*/ process.cwd(), bar)
+@seldonframe/crm:build: 
+@seldonframe/crm:build: Import trace:
+@seldonframe/crm:build:   App Route:
+@seldonframe/crm:build:     ./packages/crm/next.config.ts
+@seldonframe/crm:build:     ./packages/crm/src/lib/soul-compiler/blocks.ts
+@seldonframe/crm:build:     ./packages/crm/src/app/api/v1/workspace/generate-landing-page/route.ts
+@seldonframe/crm:build: 
+@seldonframe/crm:build: 
+@seldonframe/crm:build: ✓ Compiled successfully in 4.3min
+@seldonframe/crm:build:   Skipping validation of types
+@seldonframe/crm:build:   Finished TypeScript config validation in 18ms ...
+@seldonframe/crm:build:   Collecting page data using 7 workers ...
+@seldonframe/crm:build:   Generating static pages using 7 workers (0/725) ...
+@seldonframe/crm:build:   Generating static pages using 7 workers (181/725) 
+@seldonframe/crm:build:   Generating static pages using 7 workers (362/725) 
+@seldonframe/crm:build:   Generating static pages using 7 workers (543/725) 
+@seldonframe/crm:build: ✓ Generating static pages using 7 workers (725/725) in 6.1s
+@seldonframe/crm:build:   Finalizing page optimization ...
+@seldonframe/crm:build: 
+@seldonframe/crm:build: Route (app)
+@seldonframe/crm:build: ┌ ƒ /
+@seldonframe/crm:build: ├ ƒ /_not-found
+@seldonframe/crm:build: ├ ƒ /.well-known/oauth-authorization-server
+@seldonframe/crm:build: ├ ƒ /.well-known/oauth-protected-resource
+@seldonframe/crm:build: ├ ○ /.well-known/openai-apps-challenge
+@seldonframe/crm:build: ├ ƒ /.well-known/workflow/v1/flow
+@seldonframe/crm:build: ├ ƒ /.well-known/workflow/v1/step
+@seldonframe/crm:build: ├ ƒ /.well-known/workflow/v1/webhook/[token]
+@seldonframe/crm:build: ├ ƒ /a/[slug]
+@seldonframe/crm:build: ├ ƒ /activecampaign-pricing
+@seldonframe/crm:build: ├ ƒ /activecampaign-pricing.md
+@seldonframe/crm:build: ├ ƒ /activities
+@seldonframe/crm:build: ├ ƒ /admin/[workspaceId]
+@seldonframe/crm:build: ├ ƒ /admin/blocks/review
+@seldonframe/crm:build: ├ ƒ /admin/invalid
+@seldonframe/crm:build: ├ ƒ /agencies
+@seldonframe/crm:build: ├ ƒ /agency
+@seldonframe/crm:build: ├ ƒ /agent/[deploymentId]
+@seldonframe/crm:build: ├ ƒ /agent/[deploymentId]/setup
+@seldonframe/crm:build: ├ ƒ /agents
+@seldonframe/crm:build: ├ ƒ /agents/[id]
+@seldonframe/crm:build: ├ ƒ /agents/[id]/conversations
+@seldonframe/crm:build: ├ ƒ /agents/[id]/evals
+@seldonframe/crm:build: ├ ƒ /agents/[id]/improve
+@seldonframe/crm:build: ├ ƒ /agents/[id]/settings
+@seldonframe/crm:build: ├ ƒ /agents/[id]/test
+@seldonframe/crm:build: ├ ƒ /agents/runs
+@seldonframe/crm:build: ├ ƒ /ai-agents
+@seldonframe/crm:build: ├ ○ /ai-agents.md
+@seldonframe/crm:build: ├ ƒ /ai-agents/[job]
+@seldonframe/crm:build: ├ ƒ /ai-agents/[job]/for/[vertical]
+@seldonframe/crm:build: ├ ƒ /ai-agents/listing.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-activecampaign
+@seldonframe/crm:build: ├ ƒ /alternative-to-activecampaign.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-botpress
+@seldonframe/crm:build: ├ ƒ /alternative-to-botpress.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-chatbase
+@seldonframe/crm:build: ├ ƒ /alternative-to-chatbase.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-claude-projects
+@seldonframe/crm:build: ├ ƒ /alternative-to-claude-projects.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-clickfunnels
+@seldonframe/crm:build: ├ ƒ /alternative-to-clickfunnels.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-durable
+@seldonframe/crm:build: ├ ƒ /alternative-to-durable.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-gohighlevel
+@seldonframe/crm:build: ├ ƒ /alternative-to-gohighlevel.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-goodcall
+@seldonframe/crm:build: ├ ƒ /alternative-to-goodcall.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-hubspot
+@seldonframe/crm:build: ├ ƒ /alternative-to-hubspot.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-kartra
+@seldonframe/crm:build: ├ ƒ /alternative-to-kartra.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-keap
+@seldonframe/crm:build: ├ ƒ /alternative-to-keap.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-klaviyo
+@seldonframe/crm:build: ├ ƒ /alternative-to-klaviyo.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-lindy
+@seldonframe/crm:build: ├ ƒ /alternative-to-lindy.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-linktree
+@seldonframe/crm:build: ├ ƒ /alternative-to-linktree.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-my-ai-front-desk
+@seldonframe/crm:build: ├ ƒ /alternative-to-my-ai-front-desk.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-podium
+@seldonframe/crm:build: ├ ƒ /alternative-to-podium.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-retell-ai
+@seldonframe/crm:build: ├ ƒ /alternative-to-retell-ai.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-salesforce
+@seldonframe/crm:build: ├ ƒ /alternative-to-salesforce.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-sharpspring
+@seldonframe/crm:build: ├ ƒ /alternative-to-sharpspring.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-smith-ai
+@seldonframe/crm:build: ├ ƒ /alternative-to-smith-ai.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-stammer-ai
+@seldonframe/crm:build: ├ ƒ /alternative-to-stammer-ai.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-synthflow
+@seldonframe/crm:build: ├ ƒ /alternative-to-synthflow.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-vapi
+@seldonframe/crm:build: ├ ƒ /alternative-to-vapi.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-vendasta
+@seldonframe/crm:build: ├ ƒ /alternative-to-vendasta.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-voiceflow
+@seldonframe/crm:build: ├ ƒ /alternative-to-voiceflow.md
+@seldonframe/crm:build: ├ ƒ /alternative-to-zoho
+@seldonframe/crm:build: ├ ƒ /alternative-to-zoho.md
+@seldonframe/crm:build: ├ ƒ /alternatives
+@seldonframe/crm:build: ├ ƒ /api/acp/checkout_sessions
+@seldonframe/crm:build: ├ ƒ /api/acp/checkout_sessions/[id]
+@seldonframe/crm:build: ├ ƒ /api/acp/checkout_sessions/[id]/cancel
+@seldonframe/crm:build: ├ ƒ /api/acp/checkout_sessions/[id]/complete
+@seldonframe/crm:build: ├ ƒ /api/acp/feed
+@seldonframe/crm:build: ├ ƒ /api/ap2/.well-known
+@seldonframe/crm:build: ├ ƒ /api/ap2/checkout
+@seldonframe/crm:build: ├ ƒ /api/auth-debug
+@seldonframe/crm:build: ├ ƒ /api/auth/[...nextauth]
+@seldonframe/crm:build: ├ ƒ /api/auth/debug
+@seldonframe/crm:build: ├ ƒ /api/chatgpt/mcp
+@seldonframe/crm:build: ├ ƒ /api/copilot/turn
+@seldonframe/crm:build: ├ ƒ /api/cron/automations
+@seldonframe/crm:build: ├ ƒ /api/cron/brain-compile
+@seldonframe/crm:build: ├ ƒ /api/cron/brain-promote
+@seldonframe/crm:build: ├ ƒ /api/cron/dream-collect
+@seldonframe/crm:build: ├ ƒ /api/cron/event-agent-scheduled-sends
+@seldonframe/crm:build: ├ ƒ /api/cron/expire-proposals
+@seldonframe/crm:build: ├ ƒ /api/cron/gc-seldonchat-blobs
+@seldonframe/crm:build: ├ ƒ /api/cron/indexnow
+@seldonframe/crm:build: ├ ƒ /api/cron/metrics-snapshot
+@seldonframe/crm:build: ├ ƒ /api/cron/orphan-workspace-ttl
+@seldonframe/crm:build: ├ ƒ /api/cron/outbound-scheduled-sends
+@seldonframe/crm:build: ├ ƒ /api/cron/payment-dunning
+@seldonframe/crm:build: ├ ƒ /api/cron/reconcile-workspace-billing
+@seldonframe/crm:build: ├ ƒ /api/cron/report-contact-usage
+@seldonframe/crm:build: ├ ƒ /api/cron/schedule-agents
+@seldonframe/crm:build: ├ ƒ /api/cron/usage-caps
+@seldonframe/crm:build: ├ ƒ /api/cron/usage-reset
+@seldonframe/crm:build: ├ ƒ /api/cron/voice-rent
+@seldonframe/crm:build: ├ ƒ /api/cron/workflow-tick
+@seldonframe/crm:build: ├ ƒ /api/deployments/[id]/calendar/callback
+@seldonframe/crm:build: ├ ƒ /api/email/open/[emailId]
+@seldonframe/crm:build: ├ ƒ /api/integrations/anthropic
+@seldonframe/crm:build: ├ ƒ /api/integrations/mcp/callback
+@seldonframe/crm:build: ├ ƒ /api/internal/brain-health
+@seldonframe/crm:build: ├ ƒ /api/marketplace/fork
+@seldonframe/crm:build: ├ ƒ /api/mcp/v1
+@seldonframe/crm:build: ├ ƒ /api/metrics
+@seldonframe/crm:build: ├ ƒ /api/oauth/authorize
+@seldonframe/crm:build: ├ ƒ /api/oauth/register
+@seldonframe/crm:build: ├ ƒ /api/oauth/token
+@seldonframe/crm:build: ├ ƒ /api/og
+@seldonframe/crm:build: ├ ƒ /api/og/shipped
+@seldonframe/crm:build: ├ ƒ /api/portal/documents/upload
+@seldonframe/crm:build: ├ ƒ /api/stripe/checkout
+@seldonframe/crm:build: ├ ƒ /api/stripe/connect/callback
+@seldonframe/crm:build: ├ ƒ /api/stripe/portal
+@seldonframe/crm:build: ├ ƒ /api/stripe/webhook
+@seldonframe/crm:build: ├ ƒ /api/tools/website-grader
+@seldonframe/crm:build: ├ ƒ /api/v1/access-check
+@seldonframe/crm:build: ├ ƒ /api/v1/activities
+@seldonframe/crm:build: ├ ƒ /api/v1/admin/stats
+@seldonframe/crm:build: ├ ƒ /api/v1/agents
+@seldonframe/crm:build: ├ ƒ /api/v1/agents/[slug]/mcp
+@seldonframe/crm:build: ├ ƒ /api/v1/agents/generate
+@seldonframe/crm:build: ├ ƒ /api/v1/approvals/[approvalId]/override
+@seldonframe/crm:build: ├ ƒ /api/v1/approvals/[approvalId]/resolve
+@seldonframe/crm:build: ├ ƒ /api/v1/approvals/magic-link/[token]/resolve
+@seldonframe/crm:build: ├ ƒ /api/v1/approvals/pending
+@seldonframe/crm:build: ├ ƒ /api/v1/auth/approve
+@seldonframe/crm:build: ├ ƒ /api/v1/auth/check
+@seldonframe/crm:build: ├ ƒ /api/v1/auth/initiate
+@seldonframe/crm:build: ├ ƒ /api/v1/auth/reject
+@seldonframe/crm:build: ├ ƒ /api/v1/billing/claim-and-checkout
+@seldonframe/crm:build: ├ ƒ /api/v1/booking/appointment-types
+@seldonframe/crm:build: ├ ƒ /api/v1/booking/appointment-types/[slug]
+@seldonframe/crm:build: ├ ƒ /api/v1/booking/configure
+@seldonframe/crm:build: ├ ƒ /api/v1/bookings
+@seldonframe/crm:build: ├ ƒ /api/v1/bookings/[id]
+@seldonframe/crm:build: ├ ƒ /api/v1/bookings/[id]/cancel
+@seldonframe/crm:build: ├ ƒ /api/v1/bookings/[id]/reschedule
+@seldonframe/crm:build: ├ ƒ /api/v1/brain
+@seldonframe/crm:build: ├ ƒ /api/v1/brain/health
+@seldonframe/crm:build: ├ ƒ /api/v1/build/blocks/search
+@seldonframe/crm:build: ├ ƒ /api/v1/build/deploy
+@seldonframe/crm:build: ├ ƒ /api/v1/build/discover
+@seldonframe/crm:build: ├ ƒ /api/v1/build/improve
+@seldonframe/crm:build: ├ ƒ /api/v1/build/improve/apply
+@seldonframe/crm:build: ├ ƒ /api/v1/build/inspect
+@seldonframe/crm:build: ├ ƒ /api/v1/build/listings
+@seldonframe/crm:build: ├ ƒ /api/v1/build/payout
+@seldonframe/crm:build: ├ ƒ /api/v1/build/run
+@seldonframe/crm:build: ├ ƒ /api/v1/build/wallet/balance
+@seldonframe/crm:build: ├ ƒ /api/v1/build/wallet/topup
+@seldonframe/crm:build: ├ ƒ /api/v1/claim
+@seldonframe/crm:build: ├ ƒ /api/v1/contacts
+@seldonframe/crm:build: ├ ƒ /api/v1/contacts/[id]
+@seldonframe/crm:build: ├ ƒ /api/v1/conversations/turn
+@seldonframe/crm:build: ├ ƒ /api/v1/coupons
+@seldonframe/crm:build: ├ ƒ /api/v1/deals
+@seldonframe/crm:build: ├ ƒ /api/v1/deals/[id]
+@seldonframe/crm:build: ├ ƒ /api/v1/domains
+@seldonframe/crm:build: ├ ƒ /api/v1/email/send-welcome
+@seldonframe/crm:build: ├ ƒ /api/v1/emails
+@seldonframe/crm:build: ├ ƒ /api/v1/emails/[id]
+@seldonframe/crm:build: ├ ƒ /api/v1/emails/suppressions
+@seldonframe/crm:build: ├ ƒ /api/v1/emails/suppressions/[email]
+@seldonframe/crm:build: ├ ƒ /api/v1/forms
+@seldonframe/crm:build: ├ ƒ /api/v1/forms/[id]
+@seldonframe/crm:build: ├ ƒ /api/v1/forms/[id]/submissions
+@seldonframe/crm:build: ├ ƒ /api/v1/forms/submit
+@seldonframe/crm:build: ├ ƒ /api/v1/handoff/import
+@seldonframe/crm:build: ├ ƒ /api/v1/intake/customize
+@seldonframe/crm:build: ├ ƒ /api/v1/integrations
+@seldonframe/crm:build: ├ ƒ /api/v1/invoices
+@seldonframe/crm:build: ├ ƒ /api/v1/invoices/[id]
+@seldonframe/crm:build: ├ ƒ /api/v1/invoices/[id]/send
+@seldonframe/crm:build: ├ ƒ /api/v1/invoices/[id]/void
+@seldonframe/crm:build: ├ ƒ /api/v1/landing
+@seldonframe/crm:build: ├ ƒ /api/v1/landing/[id]
+@seldonframe/crm:build: ├ ƒ /api/v1/landing/[id]/publish
+@seldonframe/crm:build: ├ ƒ /api/v1/landing/generate
+@seldonframe/crm:build: ├ ƒ /api/v1/landing/r1/customize
+@seldonframe/crm:build: ├ ƒ /api/v1/landing/r1/generate
+@seldonframe/crm:build: ├ ƒ /api/v1/landing/r1/revert
+@seldonframe/crm:build: ├ ƒ /api/v1/landing/r1/versions
+@seldonframe/crm:build: ├ ƒ /api/v1/landing/section/update
+@seldonframe/crm:build: ├ ƒ /api/v1/landing/templates
+@seldonframe/crm:build: ├ ƒ /api/v1/landing/templates/[id]
+@seldonframe/crm:build: ├ ƒ /api/v1/landing/track-visit
+@seldonframe/crm:build: ├ ƒ /api/v1/landing/update
+@seldonframe/crm:build: ├ ƒ /api/v1/leads/operator-signup
+@seldonframe/crm:build: ├ ƒ /api/v1/marketplace/listings
+@seldonframe/crm:build: ├ ƒ /api/v1/marketplace/listings/[listingId]/publish
+@seldonframe/crm:build: ├ ƒ /api/v1/marketplace/stripe/webhook
+@seldonframe/crm:build: ├ ƒ /api/v1/orchestration/clients
+@seldonframe/crm:build: ├ ƒ /api/v1/orchestration/propagate
+@seldonframe/crm:build: ├ ƒ /api/v1/packs/caldiy-booking/install
+@seldonframe/crm:build: ├ ƒ /api/v1/packs/formbricks-intake/install
+@seldonframe/crm:build: ├ ƒ /api/v1/pages/[pageId]
+@seldonframe/crm:build: ├ ƒ /api/v1/partner-agencies
+@seldonframe/crm:build: ├ ƒ /api/v1/payments
+@seldonframe/crm:build: ├ ƒ /api/v1/payments/[id]
+@seldonframe/crm:build: ├ ƒ /api/v1/payments/[id]/refund
+@seldonframe/crm:build: ├ ƒ /api/v1/portal/invite
+@seldonframe/crm:build: ├ ƒ /api/v1/portal/self-service
+@seldonframe/crm:build: ├ ƒ /api/v1/proposals
+@seldonframe/crm:build: ├ ƒ /api/v1/proposals/connect/return
+@seldonframe/crm:build: ├ ƒ /api/v1/proposals/connect/start
+@seldonframe/crm:build: ├ ƒ /api/v1/public/agent/[slug]/embed.js
+@seldonframe/crm:build: ├ ƒ /api/v1/public/agent/[slug]/turn
+@seldonframe/crm:build: ├ ƒ /api/v1/public/analyze-url
+@seldonframe/crm:build: ├ ƒ /api/v1/public/blocks/[name]/skill
+@seldonframe/crm:build: ├ ƒ /api/v1/public/blocks/list
+@seldonframe/crm:build: ├ ƒ /api/v1/public/booking-slots
+@seldonframe/crm:build: ├ ƒ /api/v1/public/bookings
+@seldonframe/crm:build: ├ ƒ /api/v1/public/domain
+@seldonframe/crm:build: ├ ƒ /api/v1/public/intake
+@seldonframe/crm:build: ├ ƒ /api/v1/recordings/compile-agent
+@seldonframe/crm:build: ├ ƒ /api/v1/recordings/compile-trace
+@seldonframe/crm:build: ├ ƒ /api/v1/recordings/interview
+@seldonframe/crm:build: ├ ƒ /api/v1/recordings/recording
+@seldonframe/crm:build: ├ ƒ /api/v1/recordings/session
+@seldonframe/crm:build: ├ ƒ /api/v1/recordings/upload
+@seldonframe/crm:build: ├ ƒ /api/v1/sms
+@seldonframe/crm:build: ├ ƒ /api/v1/sms/[id]
+@seldonframe/crm:build: ├ ƒ /api/v1/sms/suppressions
+@seldonframe/crm:build: ├ ƒ /api/v1/sms/suppressions/[phone]
+@seldonframe/crm:build: ├ ƒ /api/v1/soul/ingest
+@seldonframe/crm:build: ├ ƒ /api/v1/soul/sources
+@seldonframe/crm:build: ├ ƒ /api/v1/soul/submit
+@seldonframe/crm:build: ├ ƒ /api/v1/soul/wiki
+@seldonframe/crm:build: ├ ƒ /api/v1/subscriptions
+@seldonframe/crm:build: ├ ƒ /api/v1/subscriptions/[id]/cancel
+@seldonframe/crm:build: ├ ƒ /api/v1/theme/apply-design-md
+@seldonframe/crm:build: ├ ƒ /api/v1/theme/motion-preset
+@seldonframe/crm:build: ├ ƒ /api/v1/theme/update
+@seldonframe/crm:build: ├ ƒ /api/v1/verticals
+@seldonframe/crm:build: ├ ƒ /api/v1/verticals/generate
+@seldonframe/crm:build: ├ ƒ /api/v1/verticals/install
+@seldonframe/crm:build: ├ ƒ /api/v1/voice/missed-call
+@seldonframe/crm:build: ├ ƒ /api/v1/voice/openai/webhook
+@seldonframe/crm:build: ├ ƒ /api/v1/voice/openai/webhook/[orgId]
+@seldonframe/crm:build: ├ ƒ /api/v1/web/build/stream
+@seldonframe/crm:build: ├ ƒ /api/v1/web/uploads/user-image
+@seldonframe/crm:build: ├ ƒ /api/v1/web/workspaces/create-from-paste
+@seldonframe/crm:build: ├ ƒ /api/v1/web/workspaces/create-from-url
+@seldonframe/crm:build: ├ ƒ /api/v1/web/workspaces/mine
+@seldonframe/crm:build: ├ ƒ /api/v1/webhooks
+@seldonframe/crm:build: ├ ƒ /api/v1/workflow-runs
+@seldonframe/crm:build: ├ ƒ /api/v1/workflow-runs/[runId]/cancel
+@seldonframe/crm:build: ├ ƒ /api/v1/workflow-runs/[runId]/resume
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace-state
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/[id]
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/[id]/link-owner
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/[id]/revoke-bearer
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/[id]/snapshot
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/create
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/extract-instructions
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/generate-landing-page
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/media/upload
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/blocks
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/blocks/[name]/regenerate
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/booking/fields
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/booking/structure
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/complete
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/create
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/images
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/intake/fields
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/intake/structure
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/landing/composite
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/landing/delete-section
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/landing/move-section
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/landing/reorder
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/landing/structure
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/portal/preview
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/portal/section
+@seldonframe/crm:build: ├ ƒ /api/v1/workspace/v2/portal/structure
+@seldonframe/crm:build: ├ ƒ /api/v1/workspaces
+@seldonframe/crm:build: ├ ƒ /api/v1/workspaces/[id]
+@seldonframe/crm:build: ├ ƒ /api/v1/workspaces/create-full
+@seldonframe/crm:build: ├ ƒ /api/version
+@seldonframe/crm:build: ├ ƒ /api/webhooks/composio
+@seldonframe/crm:build: ├ ƒ /api/webhooks/email/inbound
+@seldonframe/crm:build: ├ ƒ /api/webhooks/resend
+@seldonframe/crm:build: ├ ƒ /api/webhooks/stripe
+@seldonframe/crm:build: ├ ƒ /api/webhooks/stripe-billing
+@seldonframe/crm:build: ├ ƒ /api/webhooks/stripe/connect
+@seldonframe/crm:build: ├ ƒ /api/webhooks/twilio/sms
+@seldonframe/crm:build: ├ ƒ /api/webhooks/twilio/voice
+@seldonframe/crm:build: ├ ƒ /auth
+@seldonframe/crm:build: ├ ƒ /automations
+@seldonframe/crm:build: ├ ƒ /automations/[id]/configure
+@seldonframe/crm:build: ├ ƒ /automations/[id]/runs
+@seldonframe/crm:build: ├ ƒ /automations/voice-receptionist
+@seldonframe/crm:build: ├ ƒ /best
+@seldonframe/crm:build: ├ ƒ /best/[slug]
+@seldonframe/crm:build: ├ ƒ /best/ai-agent-for-small-business.md
+@seldonframe/crm:build: ├ ƒ /best/ai-receptionist-for-dentists.md
+@seldonframe/crm:build: ├ ƒ /best/ai-receptionist-for-hvac.md
+@seldonframe/crm:build: ├ ƒ /best/ai-receptionist-for-med-spas.md
+@seldonframe/crm:build: ├ ƒ /best/ai-receptionist-for-plumbers.md
+@seldonframe/crm:build: ├ ƒ /best/ai-receptionist-for-salons.md
+@seldonframe/crm:build: ├ ƒ /best/ai-receptionist-for-small-business.md
+@seldonframe/crm:build: ├ ƒ /best/booking-app-for-small-business.md
+@seldonframe/crm:build: ├ ƒ /best/booking-system-for-beauty-businesses.md
+@seldonframe/crm:build: ├ ƒ /best/booking-system-for-cleaning.md
+@seldonframe/crm:build: ├ ƒ /best/booking-system-for-dentists.md
+@seldonframe/crm:build: ├ ƒ /best/booking-system-for-med-spas.md
+@seldonframe/crm:build: ├ ƒ /best/booking-system-for-salons.md
+@seldonframe/crm:build: ├ ƒ /best/booking-system-for-small-business.md
+@seldonframe/crm:build: ├ ƒ /best/crm-for-cleaning.md
+@seldonframe/crm:build: ├ ƒ /best/crm-for-construction-companies.md
+@seldonframe/crm:build: ├ ƒ /best/crm-for-dentists.md
+@seldonframe/crm:build: ├ ƒ /best/crm-for-electricians.md
+@seldonframe/crm:build: ├ ƒ /best/crm-for-hvac.md
+@seldonframe/crm:build: ├ ƒ /best/crm-for-landscapers.md
+@seldonframe/crm:build: ├ ƒ /best/crm-for-plumbers.md
+@seldonframe/crm:build: ├ ƒ /best/crm-for-roofers.md
+@seldonframe/crm:build: ├ ƒ /best/crm-for-salons.md
+@seldonframe/crm:build: ├ ƒ /best/crm-for-small-business.md
+@seldonframe/crm:build: ├ ƒ /best/everyday-ai-agent-for-small-business.md
+@seldonframe/crm:build: ├ ƒ /best/intake-form-builder-for-construction-companies.md
+@seldonframe/crm:build: ├ ƒ /best/intake-form-builder-for-med-spas.md
+@seldonframe/crm:build: ├ ƒ /best/intake-form-builder-for-small-business.md
+@seldonframe/crm:build: ├ ƒ /best/website-builder-for-cleaning.md
+@seldonframe/crm:build: ├ ƒ /best/website-builder-for-construction-companies.md
+@seldonframe/crm:build: ├ ƒ /best/website-builder-for-dentists.md
+@seldonframe/crm:build: ├ ƒ /best/website-builder-for-electricians.md
+@seldonframe/crm:build: ├ ƒ /best/website-builder-for-hvac.md
+@seldonframe/crm:build: ├ ƒ /best/website-builder-for-landscapers.md
+@seldonframe/crm:build: ├ ƒ /best/website-builder-for-med-spas.md
+@seldonframe/crm:build: ├ ƒ /best/website-builder-for-plumbers.md
+@seldonframe/crm:build: ├ ƒ /best/website-builder-for-roofers.md
+@seldonframe/crm:build: ├ ƒ /best/website-builder-for-salons.md
+@seldonframe/crm:build: ├ ƒ /best/website-builder-for-small-business.md
+@seldonframe/crm:build: ├ ƒ /blog
+@seldonframe/crm:build: ├ ƒ /blog/[slug]
+@seldonframe/crm:build: ├ ƒ /blog/agents-are-the-new-saas.md
+@seldonframe/crm:build: ├ ƒ /blog/why-mcp
+@seldonframe/crm:build: ├ ƒ /blog/why-original-content-wins-seo.md
+@seldonframe/crm:build: ├ ƒ /book/[orgSlug]/[bookingSlug]
+@seldonframe/crm:build: ├ ƒ /booking/manage/[bookingId]
+@seldonframe/crm:build: ├ ƒ /bookings
+@seldonframe/crm:build: ├ ƒ /botpress-pricing
+@seldonframe/crm:build: ├ ƒ /botpress-pricing.md
+@seldonframe/crm:build: ├ ƒ /build
+@seldonframe/crm:build: ├ ○ /build.md
+@seldonframe/crm:build: ├ ƒ /build/keys
+@seldonframe/crm:build: ├ ƒ /build/wallet
+@seldonframe/crm:build: ├ ƒ /charts
+@seldonframe/crm:build: ├ ƒ /charts/ai-front-office-trends
+@seldonframe/crm:build: ├ ƒ /charts/ai-front-office-trends.md
+@seldonframe/crm:build: ├ ƒ /charts/ai-recommendation-index
+@seldonframe/crm:build: ├ ƒ /charts/ai-recommendation-index.md
+@seldonframe/crm:build: ├ ƒ /charts/crm-pricing-index
+@seldonframe/crm:build: ├ ƒ /charts/crm-pricing-index.md
+@seldonframe/crm:build: ├ ƒ /charts/missed-revenue-decay
+@seldonframe/crm:build: ├ ƒ /charts/missed-revenue-decay.md
+@seldonframe/crm:build: ├ ƒ /chatbase-pricing
+@seldonframe/crm:build: ├ ƒ /chatbase-pricing.md
+@seldonframe/crm:build: ├ ƒ /claim
+@seldonframe/crm:build: ├ ƒ /claim-build
+@seldonframe/crm:build: ├ ƒ /clickfunnels-pricing
+@seldonframe/crm:build: ├ ƒ /clickfunnels-pricing.md
+@seldonframe/crm:build: ├ ƒ /clients
+@seldonframe/crm:build: ├ ƒ /clients/[slug]/landing/edit
+@seldonframe/crm:build: ├ ƒ /clients/[slug]/ready
+@seldonframe/crm:build: ├ ƒ /clients/new
+@seldonframe/crm:build: ├ ƒ /compare/[pair]
+@seldonframe/crm:build: ├ ƒ /compare/activecampaign-vs-klaviyo.md
+@seldonframe/crm:build: ├ ƒ /compare/chatbase-vs-botpress.md
+@seldonframe/crm:build: ├ ƒ /compare/chatbase-vs-voiceflow.md
+@seldonframe/crm:build: ├ ƒ /compare/clickfunnels-vs-kartra.md
+@seldonframe/crm:build: ├ ƒ /compare/gohighlevel-vs-activecampaign.md
+@seldonframe/crm:build: ├ ƒ /compare/gohighlevel-vs-clickfunnels.md
+@seldonframe/crm:build: ├ ƒ /compare/gohighlevel-vs-hubspot.md
+@seldonframe/crm:build: ├ ƒ /compare/gohighlevel-vs-kartra.md
+@seldonframe/crm:build: ├ ƒ /compare/gohighlevel-vs-keap.md
+@seldonframe/crm:build: ├ ƒ /compare/gohighlevel-vs-klaviyo.md
+@seldonframe/crm:build: ├ ƒ /compare/gohighlevel-vs-linktree.md
+@seldonframe/crm:build: ├ ƒ /compare/gohighlevel-vs-salesforce.md
+@seldonframe/crm:build: ├ ƒ /compare/gohighlevel-vs-sharpspring.md
+@seldonframe/crm:build: ├ ƒ /compare/gohighlevel-vs-vendasta.md
+@seldonframe/crm:build: ├ ƒ /compare/gohighlevel-vs-zoho.md
+@seldonframe/crm:build: ├ ƒ /compare/hubspot-vs-activecampaign.md
+@seldonframe/crm:build: ├ ƒ /compare/hubspot-vs-clickfunnels.md
+@seldonframe/crm:build: ├ ƒ /compare/hubspot-vs-salesforce.md
+@seldonframe/crm:build: ├ ƒ /compare/kartra-vs-gohighlevel.md
+@seldonframe/crm:build: ├ ƒ /compare/keap-vs-activecampaign.md
+@seldonframe/crm:build: ├ ƒ /compare/klaviyo-vs-hubspot.md
+@seldonframe/crm:build: ├ ƒ /compare/podium-vs-goodcall.md
+@seldonframe/crm:build: ├ ƒ /compare/salesforce-vs-zoho.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-activecampaign.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-botpress.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-chatbase.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-clickfunnels.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-durable.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-gohighlevel.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-goodcall.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-hubspot.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-kartra.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-keap.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-klaviyo.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-lindy.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-linktree.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-my-ai-front-desk.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-podium.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-retell-ai.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-salesforce.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-sharpspring.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-smith-ai.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-stammer-ai.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-synthflow.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-vapi.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-vendasta.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-voiceflow.md
+@seldonframe/crm:build: ├ ƒ /compare/seldonframe-vs-zoho.md
+@seldonframe/crm:build: ├ ƒ /compare/smith-ai-vs-goodcall.md
+@seldonframe/crm:build: ├ ƒ /compare/stammer-ai-vs-synthflow.md
+@seldonframe/crm:build: ├ ƒ /compare/synthflow-vs-retell-ai.md
+@seldonframe/crm:build: ├ ƒ /compare/synthflow-vs-vapi.md
+@seldonframe/crm:build: ├ ƒ /compare/vapi-vs-retell-ai.md
+@seldonframe/crm:build: ├ ƒ /compare/voiceflow-vs-botpress.md
+@seldonframe/crm:build: ├ ƒ /compare/zoho-vs-hubspot.md
+@seldonframe/crm:build: ├ ƒ /contacts
+@seldonframe/crm:build: ├ ƒ /contacts/[id]
+@seldonframe/crm:build: ├ ƒ /contacts/export
+@seldonframe/crm:build: ├ ƒ /contacts/new
+@seldonframe/crm:build: ├ ƒ /conversations
+@seldonframe/crm:build: ├ ƒ /conversations/[contactId]
+@seldonframe/crm:build: ├ ƒ /customer/[orgSlug]
+@seldonframe/crm:build: ├ ƒ /customer/[orgSlug]/account
+@seldonframe/crm:build: ├ ƒ /customer/[orgSlug]/appointments
+@seldonframe/crm:build: ├ ƒ /customer/[orgSlug]/billing
+@seldonframe/crm:build: ├ ƒ /customer/[orgSlug]/demo
+@seldonframe/crm:build: ├ ƒ /customer/[orgSlug]/documents
+@seldonframe/crm:build: ├ ƒ /customer/[orgSlug]/login
+@seldonframe/crm:build: ├ ƒ /customer/[orgSlug]/magic
+@seldonframe/crm:build: ├ ƒ /customer/[orgSlug]/messages
+@seldonframe/crm:build: ├ ƒ /customer/[orgSlug]/reschedule/[bookingId]
+@seldonframe/crm:build: ├ ƒ /dashboard
+@seldonframe/crm:build: ├ ƒ /dashboard/soul-deepener
+@seldonframe/crm:build: ├ ƒ /deals
+@seldonframe/crm:build: ├ ƒ /deals/[id]
+@seldonframe/crm:build: ├ ƒ /deals/pipeline
+@seldonframe/crm:build: ├ ƒ /demo
+@seldonframe/crm:build: ├ ƒ /docs
+@seldonframe/crm:build: ├ ƒ /docs/agents/build-chatbot
+@seldonframe/crm:build: ├ ƒ /docs/agents/embed
+@seldonframe/crm:build: ├ ƒ /docs/agents/eval-gate
+@seldonframe/crm:build: ├ ƒ /docs/agents/update-agent
+@seldonframe/crm:build: ├ ƒ /docs/agents/voice-sms
+@seldonframe/crm:build: ├ ƒ /docs/automation/email
+@seldonframe/crm:build: ├ ƒ /docs/automation/email-templates
+@seldonframe/crm:build: ├ ƒ /docs/automation/reminders
+@seldonframe/crm:build: ├ ƒ /docs/automation/rules
+@seldonframe/crm:build: ├ ƒ /docs/billing/invoices
+@seldonframe/crm:build: ├ ƒ /docs/billing/pricing
+@seldonframe/crm:build: ├ ƒ /docs/billing/tiers
+@seldonframe/crm:build: ├ ƒ /docs/customers/contacts
+@seldonframe/crm:build: ├ ƒ /docs/customers/custom-fields
+@seldonframe/crm:build: ├ ƒ /docs/customers/customer-portal
+@seldonframe/crm:build: ├ ƒ /docs/customers/deals
+@seldonframe/crm:build: ├ ƒ /docs/getting-started/connect-claude-code
+@seldonframe/crm:build: ├ ƒ /docs/getting-started/demo
+@seldonframe/crm:build: ├ ƒ /docs/getting-started/first-workspace
+@seldonframe/crm:build: ├ ƒ /docs/getting-started/what-is-seldonframe
+@seldonframe/crm:build: ├ ƒ /docs/integrations/google-calendar
+@seldonframe/crm:build: ├ ƒ /docs/integrations/llm
+@seldonframe/crm:build: ├ ƒ /docs/integrations/resend
+@seldonframe/crm:build: ├ ƒ /docs/integrations/stripe
+@seldonframe/crm:build: ├ ƒ /docs/integrations/twilio
+@seldonframe/crm:build: ├ ƒ /docs/learn
+@seldonframe/crm:build: ├ ƒ /docs/mcp-servers
+@seldonframe/crm:build: ├ ƒ /docs/pages/booking
+@seldonframe/crm:build: ├ ƒ /docs/pages/forms
+@seldonframe/crm:build: ├ ƒ /docs/pages/public-pages
+@seldonframe/crm:build: ├ ƒ /docs/pages/templates
+@seldonframe/crm:build: ├ ƒ /docs/quickstart
+@seldonframe/crm:build: ├ ƒ /docs/your-business/branding
+@seldonframe/crm:build: ├ ƒ /docs/your-business/custom-domains
+@seldonframe/crm:build: ├ ƒ /docs/your-business/team
+@seldonframe/crm:build: ├ ƒ /docs/your-business/upgrade-ui
+@seldonframe/crm:build: ├ ƒ /docs/your-business/workspaces
+@seldonframe/crm:build: ├ ƒ /durable-pricing
+@seldonframe/crm:build: ├ ƒ /durable-pricing.md
+@seldonframe/crm:build: ├ ƒ /editor/[pageId]
+@seldonframe/crm:build: ├ ƒ /emails
+@seldonframe/crm:build: ├ ƒ /equipment
+@seldonframe/crm:build: ├ ƒ /forms
+@seldonframe/crm:build: ├ ƒ /forms/[id]
+@seldonframe/crm:build: ├ ƒ /forms/[id]/[formSlug]
+@seldonframe/crm:build: ├ ƒ /forms/[id]/edit
+@seldonframe/crm:build: ├ ƒ /gohighlevel-pricing
+@seldonframe/crm:build: ├ ƒ /gohighlevel-pricing.md
+@seldonframe/crm:build: ├ ƒ /goodcall-pricing
+@seldonframe/crm:build: ├ ƒ /goodcall-pricing.md
+@seldonframe/crm:build: ├ ƒ /guides
+@seldonframe/crm:build: ├ ƒ /guides/[slug]
+@seldonframe/crm:build: ├ ƒ /guides/ai-agency-pricing-models.md
+@seldonframe/crm:build: ├ ƒ /guides/ai-agent-business-ideas.md
+@seldonframe/crm:build: ├ ƒ /guides/ai-agent-statistics.md
+@seldonframe/crm:build: ├ ƒ /guides/ai-marketplace-fees-compared.md
+@seldonframe/crm:build: ├ ƒ /guides/ai-receptionist-vs-answering-service.md
+@seldonframe/crm:build: ├ ƒ /guides/appointment-reminder-templates.md
+@seldonframe/crm:build: ├ ƒ /guides/average-lead-response-time-by-industry.md
+@seldonframe/crm:build: ├ ƒ /guides/average-no-show-rate-by-industry.md
+@seldonframe/crm:build: ├ ƒ /guides/benefits-of-online-booking-for-small-business.md
+@seldonframe/crm:build: ├ ƒ /guides/best-ai-agent-marketplaces.md
+@seldonframe/crm:build: ├ ƒ /guides/client-portals-for-ai-agencies.md
+@seldonframe/crm:build: ├ ƒ /guides/common-customer-questions-to-answer-on-your-website.md
+@seldonframe/crm:build: ├ ƒ /guides/faq-page-examples-for-service-businesses.md
+@seldonframe/crm:build: ├ ƒ /guides/faq-schema-for-local-seo.md
+@seldonframe/crm:build: ├ ƒ /guides/gpt-store-alternative-for-developers.md
+@seldonframe/crm:build: ├ ƒ /guides/how-do-ai-agents-get-paid.md
+@seldonframe/crm:build: ├ ƒ /guides/how-many-faqs-should-a-website-have.md
+@seldonframe/crm:build: ├ ƒ /guides/how-much-to-charge-for-an-ai-agent.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-add-online-booking-to-your-website.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-answer-business-calls-professionally.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-ask-for-a-google-review.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-build-a-missed-call-text-back-agent.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-build-a-review-request-agent.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-build-a-website-chatbot-for-clients.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-build-an-after-hours-answering-agent.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-build-an-ai-lead-qualifier.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-build-and-sell-a-speed-to-lead-agent.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-build-and-sell-an-ai-booking-agent.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-build-and-sell-an-ai-receptionist.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-choose-an-ai-phone-answering-service.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-get-ai-agency-clients.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-get-more-google-reviews.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-get-your-business-recommended-by-chatgpt.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-handle-after-hours-calls.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-let-customers-book-online.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-make-a-website-for-a-service-business.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-make-an-ai-agent-reliable.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-make-money-selling-ai-agents.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-reduce-booking-abandonment.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-reduce-no-shows.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-reduce-repetitive-customer-questions.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-rent-out-an-ai-agent-via-mcp.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-respond-to-a-negative-review.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-respond-to-leads-faster.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-sell-ai-agents-to-local-businesses.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-set-up-automated-appointment-reminders.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-show-up-in-ai-search.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-start-an-ai-automation-agency.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-write-a-faq-page.md
+@seldonframe/crm:build: ├ ƒ /guides/how-to-write-an-ai-receptionist-script.md
+@seldonframe/crm:build: ├ ƒ /guides/is-your-website-losing-you-jobs.md
+@seldonframe/crm:build: ├ ƒ /guides/local-seo-vs-geo.md
+@seldonframe/crm:build: ├ ƒ /guides/missed-call-text-back.md
+@seldonframe/crm:build: ├ ƒ /guides/one-person-company-os.md
+@seldonframe/crm:build: ├ ƒ /guides/online-booking-best-practices.md
+@seldonframe/crm:build: ├ ƒ /guides/online-booking-options-for-service-businesses.md
+@seldonframe/crm:build: ├ ƒ /guides/online-booking-vs-phone-booking.md
+@seldonframe/crm:build: ├ ƒ /guides/productized-ai-services.md
+@seldonframe/crm:build: ├ ƒ /guides/review-response-templates.md
+@seldonframe/crm:build: ├ ƒ /guides/selling-ai-services-on-fiverr-vs-owning-your-agent.md
+@seldonframe/crm:build: ├ ƒ /guides/should-you-charge-a-no-show-fee.md
+@seldonframe/crm:build: ├ ƒ /guides/smma-to-ai-agency.md
+@seldonframe/crm:build: ├ ƒ /guides/sms-vs-email-appointment-reminders.md
+@seldonframe/crm:build: ├ ƒ /guides/text-or-call-a-new-lead.md
+@seldonframe/crm:build: ├ ƒ /guides/the-5-minute-rule-for-lead-response.md
+@seldonframe/crm:build: ├ ƒ /guides/virtual-receptionist-vs-ai-receptionist.md
+@seldonframe/crm:build: ├ ƒ /guides/voice-ai-reseller-programs.md
+@seldonframe/crm:build: ├ ƒ /guides/what-is-an-mcp-marketplace.md
+@seldonframe/crm:build: ├ ƒ /guides/what-is-answer-engine-optimization.md
+@seldonframe/crm:build: ├ ƒ /guides/what-is-byok-ai.md
+@seldonframe/crm:build: ├ ƒ /guides/what-is-generative-engine-optimization.md
+@seldonframe/crm:build: ├ ƒ /guides/what-is-speed-to-lead.md
+@seldonframe/crm:build: ├ ƒ /guides/what-should-a-receptionist-say-answering-the-phone.md
+@seldonframe/crm:build: ├ ƒ /guides/what-to-include-in-an-ai-front-office-package.md
+@seldonframe/crm:build: ├ ƒ /guides/where-to-sell-ai-agents.md
+@seldonframe/crm:build: ├ ƒ /guides/white-label-ai-agents.md
+@seldonframe/crm:build: ├ ƒ /guides/why-leads-go-cold.md
+@seldonframe/crm:build: ├ ƒ /home.md
+@seldonframe/crm:build: ├ ƒ /hub
+@seldonframe/crm:build: ├ ƒ /hubspot-pricing
+@seldonframe/crm:build: ├ ƒ /hubspot-pricing.md
+@seldonframe/crm:build: ├ ƒ /index.md
+@seldonframe/crm:build: ├ ƒ /integrations
+@seldonframe/crm:build: ├ ƒ /integrations/connected
+@seldonframe/crm:build: ├ ƒ /kartra-pricing
+@seldonframe/crm:build: ├ ƒ /kartra-pricing.md
+@seldonframe/crm:build: ├ ƒ /keap-pricing
+@seldonframe/crm:build: ├ ƒ /keap-pricing.md
+@seldonframe/crm:build: ├ ƒ /klaviyo-pricing
+@seldonframe/crm:build: ├ ƒ /klaviyo-pricing.md
+@seldonframe/crm:build: ├ ƒ /l/[orgSlug]/[slug]
+@seldonframe/crm:build: ├ ƒ /landing
+@seldonframe/crm:build: ├ ƒ /landing-preview/[archetype]
+@seldonframe/crm:build: ├ ƒ /landing/[id]
+@seldonframe/crm:build: ├ ƒ /lindy-pricing
+@seldonframe/crm:build: ├ ƒ /lindy-pricing.md
+@seldonframe/crm:build: ├ ƒ /linktree-pricing
+@seldonframe/crm:build: ├ ƒ /linktree-pricing.md
+@seldonframe/crm:build: ├ ƒ /llms.txt
+@seldonframe/crm:build: ├ ƒ /login
+@seldonframe/crm:build: ├ ○ /manifest.webmanifest
+@seldonframe/crm:build: ├ ƒ /marketplace
+@seldonframe/crm:build: ├ ƒ /marketplace.md
+@seldonframe/crm:build: ├ ƒ /marketplace/[slug]
+@seldonframe/crm:build: ├ ƒ /marketplace/build
+@seldonframe/crm:build: ├ ƒ /marketplace/listing.md
+@seldonframe/crm:build: ├ ƒ /motion-lab
+@seldonframe/crm:build: ├ ƒ /my-ai-front-desk-pricing
+@seldonframe/crm:build: ├ ƒ /my-ai-front-desk-pricing.md
+@seldonframe/crm:build: ├ ƒ /oauth/authorize
+@seldonframe/crm:build: ├ ƒ /objects
+@seldonframe/crm:build: ├ ƒ /objects/[objectSlug]
+@seldonframe/crm:build: ├ ƒ /objects/[objectSlug]/[id]
+@seldonframe/crm:build: ├ ƒ /objects/[objectSlug]/pipeline
+@seldonframe/crm:build: ├ ƒ /onboard/[token]
+@seldonframe/crm:build: ├ ƒ /onboarding/[id]
+@seldonframe/crm:build: ├ ƒ /orgs
+@seldonframe/crm:build: ├ ƒ /p/[token]
+@seldonframe/crm:build: ├ ƒ /p/[token]/accept
+@seldonframe/crm:build: ├ ƒ /p/[token]/cancel
+@seldonframe/crm:build: ├ ƒ /p/[token]/decline
+@seldonframe/crm:build: ├ ƒ /p/[token]/success
+@seldonframe/crm:build: ├ ƒ /podium-pricing
+@seldonframe/crm:build: ├ ƒ /podium-pricing.md
+@seldonframe/crm:build: ├ ƒ /portal/[orgSlug]
+@seldonframe/crm:build: ├ ƒ /portal/[orgSlug]/appointments
+@seldonframe/crm:build: ├ ƒ /portal/[orgSlug]/leads
+@seldonframe/crm:build: ├ ƒ /portal/[orgSlug]/login
+@seldonframe/crm:build: ├ ƒ /portal/[orgSlug]/magic
+@seldonframe/crm:build: ├ ƒ /portal/[orgSlug]/manifest.webmanifest
+@seldonframe/crm:build: ├ ƒ /portal/[orgSlug]/messages
+@seldonframe/crm:build: ├ ƒ /portal/[orgSlug]/messages/[contactId]
+@seldonframe/crm:build: ├ ƒ /portal/[orgSlug]/offline
+@seldonframe/crm:build: ├ ƒ /portal/[orgSlug]/support-magic
+@seldonframe/crm:build: ├ ƒ /portal/approvals/[token]
+@seldonframe/crm:build: ├ ƒ /pricing
+@seldonframe/crm:build: ├ ƒ /pricing-public
+@seldonframe/crm:build: ├ ƒ /privacy
+@seldonframe/crm:build: ├ ƒ /proposals
+@seldonframe/crm:build: ├ ƒ /proposals/[id]
+@seldonframe/crm:build: ├ ƒ /proposals/new
+@seldonframe/crm:build: ├ ƒ /proposals/onboarding
+@seldonframe/crm:build: ├ ƒ /proposals/template
+@seldonframe/crm:build: ├ ƒ /record
+@seldonframe/crm:build: ├ ƒ /record/share-target
+@seldonframe/crm:build: ├ ƒ /retell-ai-pricing
+@seldonframe/crm:build: ├ ƒ /retell-ai-pricing.md
+@seldonframe/crm:build: ├ ƒ /robots.txt
+@seldonframe/crm:build: ├ ƒ /s/[orgSlug]/[...slug]
+@seldonframe/crm:build: ├ ƒ /salesforce-pricing
+@seldonframe/crm:build: ├ ƒ /salesforce-pricing.md
+@seldonframe/crm:build: ├ ƒ /seldon
+@seldonframe/crm:build: ├ ƒ /sell
+@seldonframe/crm:build: ├ ƒ /service-calls
+@seldonframe/crm:build: ├ ƒ /settings
+@seldonframe/crm:build: ├ ƒ /settings/agency-profile
+@seldonframe/crm:build: ├ ƒ /settings/api
+@seldonframe/crm:build: ├ ƒ /settings/billing
+@seldonframe/crm:build: ├ ƒ /settings/branding
+@seldonframe/crm:build: ├ ƒ /settings/client-portal
+@seldonframe/crm:build: ├ ƒ /settings/domain
+@seldonframe/crm:build: ├ ƒ /settings/features
+@seldonframe/crm:build: ├ ƒ /settings/fields
+@seldonframe/crm:build: ├ ƒ /settings/frameworks
+@seldonframe/crm:build: ├ ƒ /settings/integrations
+@seldonframe/crm:build: ├ ƒ /settings/integrations/kit
+@seldonframe/crm:build: ├ ƒ /settings/integrations/llm
+@seldonframe/crm:build: ├ ƒ /settings/payments
+@seldonframe/crm:build: ├ ƒ /settings/pipeline
+@seldonframe/crm:build: ├ ƒ /settings/profile
+@seldonframe/crm:build: ├ ƒ /settings/soul-transfer
+@seldonframe/crm:build: ├ ƒ /settings/soul-wiki
+@seldonframe/crm:build: ├ ƒ /settings/suppression
+@seldonframe/crm:build: ├ ƒ /settings/team
+@seldonframe/crm:build: ├ ƒ /settings/test-mode
+@seldonframe/crm:build: ├ ƒ /settings/theme
+@seldonframe/crm:build: ├ ƒ /settings/webhooks
+@seldonframe/crm:build: ├ ƒ /settings/workspace
+@seldonframe/crm:build: ├ ƒ /sharpspring-pricing
+@seldonframe/crm:build: ├ ƒ /sharpspring-pricing.md
+@seldonframe/crm:build: ├ ƒ /signup
+@seldonframe/crm:build: ├ ƒ /signup/billing
+@seldonframe/crm:build: ├ ƒ /signup/connect-ai
+@seldonframe/crm:build: ├ ○ /sitemap.xml
+@seldonframe/crm:build: ├ ○ /SKILL.md
+@seldonframe/crm:build: ├ ƒ /smith-ai-pricing
+@seldonframe/crm:build: ├ ƒ /smith-ai-pricing.md
+@seldonframe/crm:build: ├ ƒ /soul-marketplace
+@seldonframe/crm:build: ├ ƒ /soul-marketplace/[slug]
+@seldonframe/crm:build: ├ ƒ /soul-marketplace/[slug]/install
+@seldonframe/crm:build: ├ ƒ /stammer-ai-pricing
+@seldonframe/crm:build: ├ ƒ /stammer-ai-pricing.md
+@seldonframe/crm:build: ├ ƒ /start
+@seldonframe/crm:build: ├ ƒ /start/return
+@seldonframe/crm:build: ├ ƒ /studio
+@seldonframe/crm:build: ├ ƒ /studio/agents
+@seldonframe/crm:build: ├ ƒ /studio/agents/[id]
+@seldonframe/crm:build: ├ ƒ /studio/agents/[id]/deploy
+@seldonframe/crm:build: ├ ƒ /studio/agents/[id]/deploy-to-clients
+@seldonframe/crm:build: ├ ƒ /studio/agents/[id]/test
+@seldonframe/crm:build: ├ ƒ /studio/agents/activity
+@seldonframe/crm:build: ├ ƒ /studio/clients
+@seldonframe/crm:build: ├ ƒ /studio/earnings
+@seldonframe/crm:build: ├ ƒ /studio/new
+@seldonframe/crm:build: ├ ƒ /super-admin
+@seldonframe/crm:build: ├ ƒ /super-admin/agents
+@seldonframe/crm:build: ├ ƒ /super-admin/health
+@seldonframe/crm:build: ├ ƒ /super-admin/revenue
+@seldonframe/crm:build: ├ ƒ /super-admin/users
+@seldonframe/crm:build: ├ ƒ /super-admin/users/[userId]
+@seldonframe/crm:build: ├ ƒ /super-admin/workspaces
+@seldonframe/crm:build: ├ ƒ /super-admin/workspaces/[workspaceId]
+@seldonframe/crm:build: ├ ƒ /switch-workspace
+@seldonframe/crm:build: ├ ƒ /synthflow-pricing
+@seldonframe/crm:build: ├ ƒ /synthflow-pricing.md
+@seldonframe/crm:build: ├ ƒ /technicians
+@seldonframe/crm:build: ├ ƒ /templates
+@seldonframe/crm:build: ├ ƒ /templates/[blockId]
+@seldonframe/crm:build: ├ ƒ /templates/review/[blockId]
+@seldonframe/crm:build: ├ ƒ /templates/submit
+@seldonframe/crm:build: ├ ƒ /terms
+@seldonframe/crm:build: ├ ƒ /tools
+@seldonframe/crm:build: ├ ƒ /tools/a2p-10dlc-checker
+@seldonframe/crm:build: ├ ƒ /tools/agency-margin-calculator
+@seldonframe/crm:build: ├ ƒ /tools/ai-receptionist-cost-calculator
+@seldonframe/crm:build: ├ ƒ /tools/ai-receptionist-script-generator
+@seldonframe/crm:build: ├ ƒ /tools/ai-visibility-checker
+@seldonframe/crm:build: ├ ƒ /tools/ai-website-generator
+@seldonframe/crm:build: ├ ƒ /tools/booking-friction-grader
+@seldonframe/crm:build: ├ ƒ /tools/claude-project-brief-generator
+@seldonframe/crm:build: ├ ƒ /tools/free-booking-page
+@seldonframe/crm:build: ├ ƒ /tools/gohighlevel-cost-calculator
+@seldonframe/crm:build: ├ ƒ /tools/google-review-link-generator
+@seldonframe/crm:build: ├ ƒ /tools/hubspot-pricing-calculator
+@seldonframe/crm:build: ├ ƒ /tools/klaviyo-cost-calculator
+@seldonframe/crm:build: ├ ƒ /tools/missed-call-calculator
+@seldonframe/crm:build: ├ ƒ /tools/no-show-cost-calculator
+@seldonframe/crm:build: ├ ƒ /tools/review-response-generator
+@seldonframe/crm:build: ├ ƒ /tools/service-business-faq-generator
+@seldonframe/crm:build: ├ ƒ /tools/speed-to-lead-calculator
+@seldonframe/crm:build: ├ ƒ /tools/voice-ai-cost-calculator
+@seldonframe/crm:build: ├ ƒ /tools/website-grader
+@seldonframe/crm:build: ├ ƒ /try
+@seldonframe/crm:build: ├ ƒ /vapi-pricing
+@seldonframe/crm:build: ├ ƒ /vapi-pricing.md
+@seldonframe/crm:build: ├ ƒ /vendasta-pricing
+@seldonframe/crm:build: ├ ƒ /vendasta-pricing.md
+@seldonframe/crm:build: ├ ƒ /voiceflow-pricing
+@seldonframe/crm:build: ├ ƒ /voiceflow-pricing.md
+@seldonframe/crm:build: ├ ƒ /w/[slug]
+@seldonframe/crm:build: ├ ƒ /w/[slug]/login
+@seldonframe/crm:build: ├ ƒ /w/[slug]/services/[service]
+@seldonframe/crm:build: ├ ƒ /welcome
+@seldonframe/crm:build: ├ ƒ /welcome-public
+@seldonframe/crm:build: ├ ƒ /zoho-pricing
+@seldonframe/crm:build: └ ƒ /zoho-pricing.md
+@seldonframe/crm:build: 
+@seldonframe/crm:build: 
+@seldonframe/crm:build: ƒ Proxy (Middleware)
+@seldonframe/crm:build: 
+@seldonframe/crm:build: ○  (Static)   prerendered as static content
+@seldonframe/crm:build: ƒ  (Dynamic)  server-rendered on demand
+@seldonframe/crm:build: 
+
+ Tasks:    4 successful, 4 total
+Cached:    0 cached, 4 total
+  Time:    5m43.627s 
+
+ WARNING  no output files found for task @seldonframe/core#build. Please check your `outputs` key in `turbo.json`
+ WARNING  no output files found for task @seldonframe/payments#build. Please check your `outputs` key in `turbo.json`

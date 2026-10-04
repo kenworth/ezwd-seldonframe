@@ -1,0 +1,16 @@
+SEK Glass voice fix, 2026-10-02 UTC
+Failure: inbound call accepted, followed by a 404 call_id_not_found on the control WebSocket. Deployment selected builder credentials different from accept credentials.
+Fix: global SIP webhook retains the accept credential for the control WebSocket and removes the unnecessary builder key lookup. Per-org webhook and text/chat credentials unchanged.
+Live image: seldonframe-ezwd:sek-voice-session-fix-ready-20261002
+Original image: seldonframe-ezwd:agency-scale-capfix-20261002
+Source fix: route.fixed.ts and source.patch. Compiled hotfix: route-chunk.fixed.js. Original files retained alongside.
+Validation: 91 voice unit tests passed; compiled JavaScript syntax check passed; staged /login=200 and webhook GET=405; public /login=200; live container healthy. Runtime persona includes Seka, SEK Glass, services, and the saved greeting.
+Full source rebuild: see build-isolated.log and build-isolated.exit.
+Live call verification pending a fresh call from the user.
+Deployment note: existing image carried Compose labels. Recreating the app also removed the previous buildfix container and temporary smoke/validation containers. Validation restarted under a separate Compose project label. Database and proxy were not recreated.
+Rollback: run rollback.sh only if a rollback is needed. It preserves unrelated compose settings and checks the currently configured image before replacing it.
+
+Second live-call finding: control WebSocket attached successfully after key correction, but session.update was rejected with cannot_update_voice because default assistant audio had already started.
+Second fix: accept with audio.input.turn_detection=null, restore VAD with the client persona, and request the greeting only after session.updated. Duplicate acknowledgments do not repeat the greeting.
+Current live image: seldonframe-ezwd:sek-voice-init-fix-20261003
+Validation: 93 tests passed including both new regression cases; both compiled voice chunks pass node --check; app healthy and public login HTTP 200. Full source rebuild: build-v2.log / build-v2.exit. Fresh live-call verification pending.

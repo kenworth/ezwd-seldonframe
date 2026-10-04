@@ -1,0 +1,8 @@
+Voice startup fix — 2026-10-04 UTC
+Live image: seldonframe-ezwd:photos-v8-voice-delay-20261004
+Base image: seldonframe-ezwd:photos-v8-20261004 (preserves other session changes).
+Change: global OpenAI SIP webhook resolves persona and opens transcript before accepting the call, then immediately attaches realtime control socket. Existing wallet policy and voice/persona retained. Failed accept closes prepared transcript.
+Evidence: old logs showed 2.59 and 2.74 seconds from accept to first response request. Full reported 10-second delay not independently measured.
+Validation: full pnpm build passed (4 tasks); 81 existing voice tests; 8 regression tests including compiled/source parity. Staged and public login 200; webhook GET 405; production healthy. Real phone-call timing still requires user test.
+Artifacts: route.original.ts, route.fixed.ts, route-chunk.original.js, route-chunk.fixed.js, patch-runtime.py, startup-order.test.cjs, Dockerfile, build.log, build.exit.
+Rollback: replace only the image value seldonframe-ezwd:photos-v8-voice-delay-20261004 with seldonframe-ezwd:photos-v8-20261004 in /root/seldonframe/docker-compose.yml, then docker compose up -d --no-deps --wait app from /root/seldonframe. Do not restore the entire compose backup over later changes.

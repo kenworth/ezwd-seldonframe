@@ -1,0 +1,49 @@
+
+> seldon-frame@0.1.0 build /app
+> turbo run build
+
+
+Attention:
+Turborepo now collects completely anonymous telemetry regarding usage.
+This information is used to shape the Turborepo roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://turborepo.dev/docs/telemetry
+
+• turbo 2.8.20
+
+   • Packages in scope: @seldonframe/cli, @seldonframe/core, @seldonframe/crm, @seldonframe/payments
+   • Running build in 4 packages
+   • Remote caching disabled
+
+@seldonframe/core:build: cache miss, executing de9bf546fb4f8814
+@seldonframe/cli:build: cache miss, executing a15358eab4e7e40f
+@seldonframe/payments:build: cache miss, executing 4b996162db3bf76c
+@seldonframe/payments:build: 
+@seldonframe/payments:build: > @seldonframe/payments@0.1.0 build /app/packages/payments
+@seldonframe/payments:build: > tsc -p tsconfig.json --noEmit
+@seldonframe/payments:build: 
+@seldonframe/core:build: 
+@seldonframe/core:build: > @seldonframe/core@0.1.0 build /app/packages/core
+@seldonframe/core:build: > tsc -p tsconfig.json --noEmit
+@seldonframe/core:build: 
+@seldonframe/cli:build: 
+@seldonframe/cli:build: > @seldonframe/cli@0.1.0 build /app/packages/cli
+@seldonframe/cli:build: > tsc -p tsconfig.json
+@seldonframe/cli:build: 
+@seldonframe/crm:build: cache miss, executing 1cf547f0789c38f9
+@seldonframe/crm:build: 
+@seldonframe/crm:build: > @seldonframe/crm@0.1.0 build /app/packages/crm
+@seldonframe/crm:build: > bash scripts/check-use-server.sh src && next build
+@seldonframe/crm:build: 
+@seldonframe/crm:build: ✓ All 'use server' files export only async functions / types.
+@seldonframe/crm:build: Discovering workflow directives 49546ms
+@seldonframe/crm:build: Created steps bundle 195ms
+@seldonframe/crm:build: Created intermediate workflow bundle 155ms
+@seldonframe/crm:build: Creating webhook route
+@seldonframe/crm:build: Creating manifest...
+@seldonframe/crm:build: Created manifest with 7 steps, 1 workflow, and 0 classes 20ms
+@seldonframe/crm:build: ▲ Next.js 16.2.1 (Turbopack)
+@seldonframe/crm:build: - Experiments (use with caution):
+@seldonframe/crm:build:   · serverActions
+@seldonframe/crm:build: 
+@seldonframe/crm:build:   Creating an optimized production build ...

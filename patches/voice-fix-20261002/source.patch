@@ -1,0 +1,62 @@
+--- a/packages/crm/src/app/api/v1/voice/openai/webhook/route.ts
++++ b/packages/crm/src/app/api/v1/voice/openai/webhook/route.ts
+@@ -67,12 +67,6 @@
+ // to the existing workspace resolution below when no active deployment matches.
+ import { resolveDeploymentByNumber } from "@/lib/agents/voice/resolve-deployment-by-number";
+ import { loadDeploymentVoiceContext } from "@/lib/agents/voice/deployment-voice";
+-// Task 12 (marketplace buyer onboarding) — route a deployment's voice call to the
+-// BUILDER's (template author's) OpenAI key first, fail-soft to the platform key.
+-import {
+-  resolveDeploymentRuntimeKey,
+-  buildDefaultDeploymentRuntimeKeyDeps,
+-} from "@/lib/agents/deployment-ai-key-runtime";
+ // Voice deploy + metered billing (Task 4) — strictly ADDITIVE, flag-gated via
+ // SF_VOICE_MANAGED. isMeteredCall()/gateMeteredAccept()/meterCallEnd() are the
+ // pure DI "money brain" (Task 3); getWalletBalanceMicros/debitVoiceUsage are the
+@@ -415,39 +409,16 @@
+               }
+             : {};
+ 
+-          // BUILDER-KEY ROUTING (marketplace buyer onboarding, Task 12): a
+-          // deployment runs the BUILDER's (template author's) agent, so the OpenAI
+-          // Realtime key should be the BUILDER's — resolved from the deployment's
+-          // TEMPLATE owner org (NOT deployment.builderOrgId, which is the BUYER for
+-          // a bought agent) — and only fail-soft to the platform key. Best-effort:
+-          // any resolve error degrades to the platform `apiKey` (never drops the
+-          // call). `source`/`ready` are logged so a builder with NO key (ready:
+-          // false) is visible — the call still answers on the platform key when one
+-          // exists; only with NO key anywhere does it stay unanswered.
+-          //
+-          // Voice deploy + metered billing (Task 4): on a METERED call the
+-          // platform (SF-managed) key is forced instead, and
+-          // resolveDeploymentRuntimeKey is skipped entirely — it resolves a key
+-          // scoped to the TEMPLATE OWNER's OpenAI project, which would fail
+-          // cross-project against the shared platform SIP trunk a metered call
+-          // runs on. Unmetered calls (flag off) are 100% unchanged below.
+-          const depKey = metered
+-            ? null
+-            : await resolveDeploymentRuntimeKey(
+-                // A number-resolved deployment is a voice (phone) surface by
+-                // definition; pass it explicitly (the narrow row omits `surface`).
+-                { surface: "phone", agentTemplateId: deployment.agentTemplateId },
+-                {
+-                  ...buildDefaultDeploymentRuntimeKeyDeps(),
+-                  platform: { openai: apiKey, anthropic: process.env.ANTHROPIC_API_KEY ?? null },
+-                },
+-              ).catch(() => null);
+-          const voiceApiKey = metered ? apiKey : (depKey?.apiKey ?? apiKey);
++          // SIP sessions belong to the project that accepted the call. Keep the
++          // control WebSocket on that SAME credential; a builder key from another
++          // project cannot attach and leaves the call without its client persona.
++          // The org-scoped webhook separately accepts with its own org key.
++          const voiceApiKey = apiKey;
+           logEvent("voice_call_deployment_key_resolved", {
+             call_id: callId,
+             deployment_id: deployment.id,
+-            key_source: metered ? "platform_metered" : (depKey?.source ?? "platform"),
+-            key_ready: metered ? true : (depKey?.ready ?? Boolean(apiKey)),
++            key_source: metered ? "platform_metered" : "platform_sip_session",
++            key_ready: Boolean(apiKey),
+           });
+ 
+           // Voice deploy + metered billing (Task 4) — bracket the call with a

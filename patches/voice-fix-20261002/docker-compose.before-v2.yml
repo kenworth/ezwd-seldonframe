@@ -1,0 +1,216 @@
+services:
+  postgres:
+    cpu_shares: 4096
+    image: 'postgres:16'
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: seldon
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: seldonframe
+      COOLIFY_RESOURCE_UUID: fubbrjt4nkczuv0wjcyitkan
+      COOLIFY_CONTAINER_NAME: postgres-fubbrjt4nkczuv0wjcyitkan
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_NEON_PROXY: neon-proxy
+      SERVICE_NAME_MIGRATE: migrate
+      SERVICE_NAME_APP: app
+    command:
+      - postgres
+      - '-c'
+      - wal_level=logical
+    volumes:
+      - 'fubbrjt4nkczuv0wjcyitkan_pgdata:/var/lib/postgresql/data'
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - 'pg_isready -U seldon -d seldonframe'
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    container_name: postgres-fubbrjt4nkczuv0wjcyitkan
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.3.23
+      - coolify.serviceId=30
+      - coolify.type=service
+      - coolify.name=postgres-fubbrjt4nkczuv0wjcyitkan
+      - coolify.resourceName=seldonframe
+      - coolify.projectName=agency-platform
+      - coolify.serviceName=postgres
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subId=33
+      - coolify.service.subType=database
+      - coolify.service.subName=postgres
+    networks:
+      fubbrjt4nkczuv0wjcyitkan: null
+    env_file:
+      - .env
+  neon-proxy:
+    cpu_shares: 4096
+    image: 'ghcr.io/timowilhelm/local-neon-http-proxy:main'
+    restart: unless-stopped
+    environment:
+      PG_CONNECTION_STRING: 'postgres://seldon:${POSTGRES_PASSWORD}@postgres:5432/seldonframe'
+      COOLIFY_RESOURCE_UUID: fubbrjt4nkczuv0wjcyitkan
+      COOLIFY_CONTAINER_NAME: neon-proxy-fubbrjt4nkczuv0wjcyitkan
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_NEON_PROXY: neon-proxy
+      SERVICE_NAME_MIGRATE: migrate
+      SERVICE_NAME_APP: app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    container_name: neon-proxy-fubbrjt4nkczuv0wjcyitkan
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.3.23
+      - coolify.serviceId=30
+      - coolify.type=service
+      - coolify.name=neon-proxy-fubbrjt4nkczuv0wjcyitkan
+      - coolify.resourceName=seldonframe
+      - coolify.projectName=agency-platform
+      - coolify.serviceName=neon-proxy
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subId=53
+      - coolify.service.subType=application
+      - coolify.service.subName=neon-proxy
+    networks:
+      fubbrjt4nkczuv0wjcyitkan: null
+    env_file:
+      - .env
+  migrate:
+    image: 'ghcr.io/seldonframe/seldonframe:1.1.0'
+    command:
+      - sh
+      - scripts/docker-migrate.sh
+    environment:
+      DATABASE_URL: 'postgres://seldon:${POSTGRES_PASSWORD}@postgres:5432/seldonframe'
+      COOLIFY_RESOURCE_UUID: fubbrjt4nkczuv0wjcyitkan
+      COOLIFY_CONTAINER_NAME: migrate-fubbrjt4nkczuv0wjcyitkan
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_NEON_PROXY: neon-proxy
+      SERVICE_NAME_MIGRATE: migrate
+      SERVICE_NAME_APP: app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: 'no'
+    container_name: migrate-fubbrjt4nkczuv0wjcyitkan
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.3.23
+      - coolify.serviceId=30
+      - coolify.type=service
+      - coolify.name=migrate-fubbrjt4nkczuv0wjcyitkan
+      - coolify.resourceName=seldonframe
+      - coolify.projectName=agency-platform
+      - coolify.serviceName=migrate
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subId=54
+      - coolify.service.subType=application
+      - coolify.service.subName=migrate
+    networks:
+      fubbrjt4nkczuv0wjcyitkan: null
+    env_file:
+      - .env
+  app:
+    cpu_shares: 4096
+    image: 'seldonframe-ezwd:sek-voice-session-fix-ready-20261002'
+    restart: unless-stopped
+    command:
+      - sh
+      - '-c'
+      - "cat > /tmp/ezwebdeals-start.js <<'__EZWD_WRAPPER__'\nconst fs=require('fs'),p=require('path'),cp=require('child_process');\nconst root='/app/packages/crm',next=root+'/.next',brand=root+'/public/brand';process.env.NEXT_PUBLIC_APP_URL='https://ai.ezwderp.com';process.env.NEXTAUTH_URL='https://ai.ezwderp.com';process.env.AUTH_URL='https://ai.ezwderp.com';console.log('EZwebdeals public origin:',process.env.NEXT_PUBLIC_APP_URL);process.env.NEXT_PUBLIC_APP_URL='https://ai.ezwderp.com';process.env.NEXTAUTH_URL='https://ai.ezwderp.com';process.env.AUTH_URL='https://ai.ezwderp.com';console.log('EZwebdeals public origin:',process.env.NEXT_PUBLIC_APP_URL);\nconst changes=[['http://localhost:3000','https://ai.ezwderp.com'],['http://localhost:3000','https://ai.ezwderp.com'],['SeldonFrame — Open-source alternative to GoHighLevel','EZwebdeals — Never Miss Another Customer Call'],['SeldonFrame','EZwebdeals'],['Seldon Studio','EZwebdeals'],['www.seldonframe.com','ezwebdeals.com'],['app.seldonframe.com','ai.ezwderp.com'],['seldonframe.com','ezwebdeals.com'],['<email>','<email>'],['#1F2B24','#003DA5'],['#1f2b24','#003DA5'],['seldonframe-favicon.svg','seldonframe-favicon.svg?brand=ezwd1'],['seldon-mark.svg','seldon-mark.svg?brand=ezwd1'],['{fontSize:13,fontWeight:600,color:\"#0f172a\",fontFamily:','{display:\"none\",fontSize:13,fontWeight:600,color:\"#0f172a\",fontFamily:'],['\"p\",{className:\"text-base font-semibold truncate\",style:{','\"p\",{className:\"text-base font-semibold truncate\",style:{display:\"none\",'],['\"agency\"===(j=(0,i.normalizeTierId)(u))?','\"agency_scale\"===(j=(0,i.normalizeTierId)(u))?{label:\"Agency Scale\",caption:\"$299/mo · unlimited own + unlimited client sub-accounts\"}:\"agency_growth\"===j?{label:\"Agency Growth\",caption:\"$199/mo · unlimited own + 30 client sub-accounts\"}:\"agency_starter\"===j?{label:\"Agency Starter\",caption:\"$99/mo · unlimited own + 10 client sub-accounts\"}:\"managed\"===j?{label:\"Managed\",caption:\"$49/mo · one workspace, runs on our keys\"}:\"agency\"===j?']];\nlet files=0;function walk(d){for(const e of fs.readdirSync(d,{withFileTypes:true})){const f=p.join(d,e.name);if(e.isDirectory())walk(f);else if(/\\.(js|json|css)$/.test(e.name)){let s=fs.readFileSync(f,'utf8'),n=s;for(const[a,b]of changes)n=n.split(a).join(b);if(n!==s){fs.writeFileSync(f,n);files++;}}}}walk(next);\nconst mark='<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><title>EZwebdeals</title><rect width=\"100\" height=\"100\" rx=\"24\" fill=\"#003DA5\"/><path fill=\"#fff\" d=\"M24 28h48v10H38v9h27v9H38v10h35v10H24z\"/><path fill=\"#FF5A00\" d=\"M69 24h12L61 76H49z\"/></svg>';\nconst wordmark='<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 100\"><rect width=\"92\" height=\"92\" x=\"4\" y=\"4\" rx=\"22\" fill=\"#003DA5\"/><path fill=\"#fff\" d=\"M25 27h48v10H39v9h27v9H39v10h35v10H25z\"/><path fill=\"#FF5A00\" d=\"M70 23h12L62 77H50z\"/><text x=\"116\" y=\"64\" font-family=\"Arial,sans-serif\" font-size=\"46\" font-weight=\"700\" fill=\"#003DA5\">EZwebdeals</text></svg>';\nfor(const f of ['seldon-mark.svg','seldonframe-favicon.svg','seldonframe-icon.svg','seldonframe-icon-dark.svg','seldonframe-icon-white.svg'])fs.writeFileSync(p.join(brand,f),mark);\nfor(const f of ['seldonframe-wordmark.svg','seldonframe-wordmark-white.svg'])fs.writeFileSync(p.join(brand,f),wordmark);\nfs.writeFileSync(p.join(brand,'manifest.webmanifest'),JSON.stringify({name:'EZwebdeals',short_name:'EZwebdeals',description:'AI receptionist and business automation for small businesses',icons:[{src:'/brand/seldonframe-favicon.svg?brand=ezwd1',sizes:'any',type:'image/svg+xml',purpose:'any maskable'}],theme_color:'#003DA5',background_color:'#ffffff',display:'standalone'}));\nconsole.log('EZwebdeals white-label: patched compiled files:',files);\nconst c=cp.spawn('pnpm',['--filter','@seldonframe/crm','start'],{stdio:'inherit'});c.on('exit',code=>process.exit(code??1));\n__EZWD_WRAPPER__\nexec node /tmp/ezwebdeals-start.js\n"
+    environment:
+      OPENAI_API_KEY: '${OPENAI_API_KEY}'
+      OPENAI_WEBHOOK_SECRET: '${OPENAI_WEBHOOK_SECRET}'
+      DATABASE_URL: 'postgres://seldon:${POSTGRES_PASSWORD}@postgres:5432/seldonframe'
+      NEON_LOCAL_HOST: neon-proxy
+      NEON_LOCAL_PORT: '4444'
+      NEXT_PUBLIC_APP_URL: 'https://ai.ezwderp.com'
+      WORKSPACE_BASE_DOMAIN: ai.ezwderp.com
+      NEXTAUTH_URL: 'https://ai.ezwderp.com'
+      AUTH_URL: 'https://ai.ezwderp.com'
+      AUTH_TRUST_HOST: 'true'
+      SF_SUPERADMIN_EMAILS: '${SF_SUPERADMIN_EMAILS}'
+      PORT: '3000'
+      AUTH_SECRET: '${AUTH_SECRET}'
+      NEXTAUTH_SECRET: '${NEXTAUTH_SECRET}'
+      ENCRYPTION_KEY: '${ENCRYPTION_KEY}'
+      GOOGLE_CLIENT_ID: '${GOOGLE_CLIENT_ID}'
+      GOOGLE_CLIENT_SECRET: '${GOOGLE_CLIENT_SECRET}'
+      SERVICE_URL_APP_3000: 'https://ai.ezwderp.com'
+      COOLIFY_RESOURCE_UUID: fubbrjt4nkczuv0wjcyitkan
+      COOLIFY_CONTAINER_NAME: app-fubbrjt4nkczuv0wjcyitkan
+      COOLIFY_FQDN: ai.ezwderp.com
+      COOLIFY_URL: 'https://ai.ezwderp.com'
+      SERVICE_NAME_POSTGRES: postgres
+      SERVICE_NAME_NEON_PROXY: neon-proxy
+      SERVICE_NAME_MIGRATE: migrate
+      SERVICE_NAME_APP: app
+    expose:
+      - '3000'
+    depends_on:
+      neon-proxy:
+        condition: service_started
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - 'curl -fsS http://localhost:3000/api/version || exit 1'
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 40s
+    container_name: app-fubbrjt4nkczuv0wjcyitkan
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.3.23
+      - coolify.serviceId=30
+      - coolify.type=service
+      - coolify.name=app-fubbrjt4nkczuv0wjcyitkan
+      - coolify.resourceName=seldonframe
+      - coolify.projectName=agency-platform
+      - coolify.serviceName=app
+      - coolify.environmentName=production
+      - coolify.pullRequestId=0
+      - coolify.service.subId=55
+      - coolify.service.subType=application
+      - coolify.service.subName=app
+      - traefik.docker.network=fubbrjt4nkczuv0wjcyitkan
+      - traefik.enable=true
+      - traefik.http.middlewares.gzip.compress=true
+      - traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https
+      - traefik.http.routers.http-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5.entryPoints=http
+      - traefik.http.routers.http-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5.middlewares=redirect-to-https
+      - 'traefik.http.routers.http-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5.rule=Host(`ai.ezwderp.com`) && PathPrefix(`/`)'
+      - traefik.http.routers.http-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5.service=http-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5
+      - traefik.http.routers.https-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5.entryPoints=https
+      - traefik.http.routers.https-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5.middlewares=gzip
+      - 'traefik.http.routers.https-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5.rule=Host(`ai.ezwderp.com`) && PathPrefix(`/`)'
+      - traefik.http.routers.https-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5.service=https-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5
+      - traefik.http.routers.https-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5.tls.certresolver=letsencrypt
+      - traefik.http.routers.https-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5.tls=true
+      - traefik.http.services.http-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5.loadbalancer.server.port=3000
+      - traefik.http.services.https-0-fubbrjt4nkczuv0wjcyitkan-app-d2a5.loadbalancer.server.port=3000
+      - 'caddy_0.encode=zstd gzip'
+      - 'caddy_0.handle_path.0_reverse_proxy={{upstreams 3000}}'
+      - 'caddy_0.handle_path=/*'
+      - caddy_0.header=-Server
+      - 'caddy_0.try_files={path} /index.html /index.php'
+      - 'caddy_0=https://ai.ezwderp.com'
+      - caddy_ingress_network=fubbrjt4nkczuv0wjcyitkan
+    networks:
+      fubbrjt4nkczuv0wjcyitkan: null
+    env_file:
+      - .env
+volumes:
+  fubbrjt4nkczuv0wjcyitkan_pgdata:
+    name: fubbrjt4nkczuv0wjcyitkan_pgdata
+networks:
+  fubbrjt4nkczuv0wjcyitkan:
+    name: fubbrjt4nkczuv0wjcyitkan
+    external: true

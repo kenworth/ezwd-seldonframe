@@ -1,0 +1,994 @@
+TAP version 13
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.134Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.137Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.138Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.139Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.139Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.140Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.141Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.142Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.142Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.143Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.144Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.144Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.145Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.145Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.146Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.146Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.146Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.146Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"conversation.item.input_audio_transcription.completed","transcript_len":12}
+# {"event":"voice_call_goodbye_detected","at":"2026-10-04T04:03:59.147Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.147Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"null"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.147Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":0,"saw_goodbye":true,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.148Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:03:59.148Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"test-response"}
+# Subtest: acceptCall
+    # Subtest: holds the model silent at /accept (not the greeting persona) — prevents the double-hello
+    ok 1 - holds the model silent at /accept (not the greeting persona) — prevents the double-hello
+      ---
+      duration_ms: 9.939041
+      type: 'test'
+      ...
+    1..1
+ok 1 - acceptCall
+  ---
+  duration_ms: 11.825496
+  type: 'suite'
+  ...
+# Subtest: runVoiceCall — control WS authentication (regression for dropped header)
+    # Subtest: constructs the WS with an Authorization: Bearer <key> header
+    ok 1 - constructs the WS with an Authorization: Bearer <key> header
+      ---
+      duration_ms: 5.352691
+      type: 'test'
+      ...
+    # Subtest: does NOT send OpenAI-Beta: realtime=v1 (that header routes the WS to the legacy API → call_id_not_found)
+    ok 2 - does NOT send OpenAI-Beta: realtime=v1 (that header routes the WS to the legacy API → call_id_not_found)
+      ---
+      duration_ms: 0.701015
+      type: 'test'
+      ...
+    # Subtest: connects to the call_id WS URL (no model arg — configured by accept)
+    ok 3 - connects to the call_id WS URL (no model arg — configured by accept)
+      ---
+      duration_ms: 1.407058
+      type: 'test'
+      ...
+    1..3
+ok 2 - runVoiceCall — control WS authentication (regression for dropped header)
+  ---
+  duration_ms: 8.340308
+  type: 'suite'
+  ...
+# Subtest: runVoiceCall — on open sends session.update then response.create
+    # Subtest: emits session.update (with the Phase 0 persona) and response.create
+    ok 1 - emits session.update (with the Phase 0 persona) and response.create
+      ---
+      duration_ms: 3.429435
+      type: 'test'
+      ...
+    1..1
+ok 3 - runVoiceCall — on open sends session.update then response.create
+  ---
+  duration_ms: 3.650962
+  type: 'suite'
+  ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.163Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.164Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.165Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.165Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.165Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.165Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.165Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.165Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"conversation.item.input_audio_transcription.completed","transcript_len":3}
+# {"event":"voice_call_goodbye_detected","at":"2026-10-04T04:03:59.166Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.166Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"null"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.166Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":0,"saw_goodbye":true,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.166Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:03:59.166Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"test-response"}
+# Subtest: runVoiceCall — message frame coercion
+    # Subtest: parses a Buffer message payload (ws delivers Buffers, not strings)
+    ok 1 - parses a Buffer message payload (ws delivers Buffers, not strings)
+      ---
+      duration_ms: 19.148948
+      type: 'test'
+      ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.307Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.307Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.312Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.312Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.312Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.313Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.313Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.313Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"null"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.313Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":0,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.313Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.314Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.315Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.315Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.319Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.319Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.320Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.322Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.322Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.323Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.323Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.323Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.336Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.336Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.336Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":2,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.336Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":3,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.336Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:03:59.336Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"test-response"}
+    # Subtest: parses a string message payload too (mixed transports)
+    ok 2 - parses a string message payload too (mixed transports)
+      ---
+      duration_ms: 143.041818
+      type: 'test'
+      ...
+    # Subtest: an ArrayBuffer message payload is decoded (binaryType=arraybuffer path)
+    ok 3 - an ArrayBuffer message payload is decoded (binaryType=arraybuffer path)
+      ---
+      duration_ms: 2.492025
+      type: 'test'
+      ...
+    # Subtest: a non-JSON / undecodable frame is ignored, not thrown
+    ok 4 - a non-JSON / undecodable frame is ignored, not thrown
+      ---
+      duration_ms: 6.819889
+      type: 'test'
+      ...
+    1..4
+ok 4 - runVoiceCall — message frame coercion
+  ---
+  duration_ms: 176.191649
+  type: 'suite'
+  ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.542Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.550Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.552Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.552Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.552Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.552Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.552Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.553Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.553Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.553Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":2,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.553Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":3,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.553Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":4,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.553Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":5,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.553Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":6,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.554Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":7,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.554Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":8,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.554Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":9,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.554Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":10,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.554Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":11,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.554Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":12,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.554Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":13,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.554Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":14,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.554Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":15,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.554Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":16,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.554Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":17,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.554Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":18,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.554Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":19,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.555Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":20,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.555Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:03:59.555Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"test-response"}
+# Subtest: runVoiceCall — assistant-turn safety cap
+    # Subtest: ends with max_turns after maxTurns SPOKEN (audio) response.done events (no goodbye)
+    ok 1 - ends with max_turns after maxTurns SPOKEN (audio) response.done events (no goodbye)
+      ---
+      duration_ms: 229.708732
+      type: 'test'
+      ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.579Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.579Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.596Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.596Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.597Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":true,"tool_count":8}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.597Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.597Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.597Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"function_call\\",\\"content_types\\":[]}]"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.597Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.function_call","tool_calls":1}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.598Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":0,"saw_goodbye":false,"tool_call_turn":true}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.598Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.function_call","tool_calls":1}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.598Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":0,"saw_goodbye":false,"tool_call_turn":true}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.598Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.function_call","tool_calls":1}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.598Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":0,"saw_goodbye":false,"tool_call_turn":true}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.598Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.function_call","tool_calls":1}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.598Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":0,"saw_goodbye":false,"tool_call_turn":true}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.598Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.function_call","tool_calls":1}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.598Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":0,"saw_goodbye":false,"tool_call_turn":true}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.598Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.function_call","tool_calls":1}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.599Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":0,"saw_goodbye":false,"tool_call_turn":true}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.599Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.function_call","tool_calls":1}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.599Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":0,"saw_goodbye":false,"tool_call_turn":true}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.599Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.function_call","tool_calls":1}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.599Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":0,"saw_goodbye":false,"tool_call_turn":true}
+# {"event":"voice_call_tool_invoked","at":"2026-10-04T04:03:59.599Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tool":"look_up_availability","ok":true,"ms":1}
+# {"event":"voice_call_tool_invoked","at":"2026-10-04T04:03:59.599Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tool":"look_up_availability","ok":true,"ms":1}
+# {"event":"voice_call_tool_invoked","at":"2026-10-04T04:03:59.599Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tool":"look_up_availability","ok":true,"ms":1}
+# {"event":"voice_call_tool_invoked","at":"2026-10-04T04:03:59.599Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tool":"look_up_availability","ok":true,"ms":1}
+# {"event":"voice_call_tool_invoked","at":"2026-10-04T04:03:59.599Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tool":"look_up_availability","ok":true,"ms":1}
+# {"event":"voice_call_tool_invoked","at":"2026-10-04T04:03:59.599Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tool":"look_up_availability","ok":true,"ms":1}
+# {"event":"voice_call_tool_invoked","at":"2026-10-04T04:03:59.600Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tool":"look_up_availability","ok":true,"ms":1}
+# {"event":"voice_call_tool_invoked","at":"2026-10-04T04:03:59.600Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tool":"look_up_availability","ok":true,"ms":1}
+    # Subtest: ends with max_turns at the DEFAULT cap (MAX_ASSISTANT_TURNS=20) of spoken turns
+    ok 2 - ends with max_turns at the DEFAULT cap (MAX_ASSISTANT_TURNS=20) of spoken turns
+      ---
+      duration_ms: 31.90415
+      type: 'test'
+      ...
+    1..2
+ok 5 - runVoiceCall — assistant-turn safety cap
+  ---
+  duration_ms: 262.341752
+  type: 'suite'
+  ...
+# Subtest: responseHasAudioOutput — counts only genuine spoken (audio) replies
+    # Subtest: true for an output with an `audio` content part
+    ok 1 - true for an output with an `audio` content part
+      ---
+      duration_ms: 0.748957
+      type: 'test'
+      ...
+    # Subtest: true for an output with an `output_audio` content part
+    ok 2 - true for an output with an `output_audio` content part
+      ---
+      duration_ms: 0.355412
+      type: 'test'
+      ...
+    # Subtest: true when audio sits alongside a text part (mixed content)
+    ok 3 - true when audio sits alongside a text part (mixed content)
+      ---
+      duration_ms: 0.234123
+      type: 'test'
+      ...
+    # Subtest: false for a function_call-only output (tool-call turn — no audio)
+    ok 4 - false for a function_call-only output (tool-call turn — no audio)
+      ---
+      duration_ms: 0.224691
+      type: 'test'
+      ...
+    # Subtest: false for a text-only output (out-of-band transcription)
+    ok 5 - false for a text-only output (out-of-band transcription)
+      ---
+      duration_ms: 0.204535
+      type: 'test'
+      ...
+    # Subtest: false for an empty output array
+    ok 6 - false for an empty output array
+      ---
+      duration_ms: 0.204658
+      type: 'test'
+      ...
+    # Subtest: false for an absent output / bare response.done
+    ok 7 - false for an absent output / bare response.done
+      ---
+      duration_ms: 0.233952
+      type: 'test'
+      ...
+    # Subtest: total — does not throw on malformed shapes (returns false)
+    ok 8 - total — does not throw on malformed shapes (returns false)
+      ---
+      duration_ms: 0.291859
+      type: 'test'
+      ...
+    1..8
+ok 6 - responseHasAudioOutput — counts only genuine spoken (audio) replies
+  ---
+  duration_ms: 3.013843
+  type: 'suite'
+  ...
+# {"event":"voice_call_ws_upgrade_rejected","at":"2026-10-04T04:03:59.609Z","severity":"error","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","http_status":401,"http_status_text":"Unauthorized","server":null,"openai_request_id":null,"cf_ray":null,"content_type":null,"body":null}
+# {"event":"voice_call_ws_error","at":"2026-10-04T04:03:59.610Z","severity":"error","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","detail":"boom"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.606Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.606Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:03:59.606Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"test-response"}
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.607Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.607Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.608Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.609Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"open_failed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.610Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.610Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_error"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.610Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.611Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.611Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.611Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.611Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# Subtest: runVoiceCall — tool-call response.done does NOT consume the turn cap
+    # Subtest: many function_call response.done events do not trigger max_turns; an audio one does
+    ok 1 - many function_call response.done events do not trigger max_turns; an audio one does
+      ---
+      duration_ms: 20.61216
+      type: 'test'
+      ...
+    1..1
+ok 7 - runVoiceCall — tool-call response.done does NOT consume the turn cap
+  ---
+  duration_ms: 20.992987
+  type: 'suite'
+  ...
+# Subtest: runVoiceCall — upgrade rejection diagnostics
+    # Subtest: unexpected-response (non-101) ends the call as open_failed with the HTTP status
+    ok 1 - unexpected-response (non-101) ends the call as open_failed with the HTTP status
+      ---
+      duration_ms: 1.382359
+      type: 'test'
+      ...
+    # Subtest: error event ends the call as ws_error
+    ok 2 - error event ends the call as ws_error
+      ---
+      duration_ms: 0.683055
+      type: 'test'
+      ...
+    1..2
+ok 8 - runVoiceCall — upgrade rejection diagnostics
+  ---
+  duration_ms: 2.298395
+  type: 'suite'
+  ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.632Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"timeout"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.632Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"timeout"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.634Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.634Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.635Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":true,"tool_count":8}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.635Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.635Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.635Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.636Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.636Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.636Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.636Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.636Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.636Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.637Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.637Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.637Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":true,"tool_count":8}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.638Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.638Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.638Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.function_call_arguments.done"}
+# {"event":"voice_call_tool_invoked","at":"2026-10-04T04:03:59.638Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tool":"look_up_availability","ok":true,"ms":0}
+# Subtest: runVoiceCall — wall-clock timeout
+    # Subtest: resolves with timeout when nothing happens before maxCallMs
+    ok 1 - resolves with timeout when nothing happens before maxCallMs
+      ---
+      duration_ms: 22.537059
+      type: 'test'
+      ...
+    1..1
+ok 9 - runVoiceCall — wall-clock timeout
+  ---
+  duration_ms: 22.9485
+  type: 'suite'
+  ...
+# Subtest: runVoiceCall — Phase 1 session.update with tools + voice
+    # Subtest: with a toolContext: declares the voice tools, tool_choice:auto, SDR persona, voice via audio.output.voice
+    ok 1 - with a toolContext: declares the voice tools, tool_choice:auto, SDR persona, voice via audio.output.voice
+      ---
+      duration_ms: 2.102636
+      type: 'test'
+      ...
+    # Subtest: without a toolContext: Phase 0 behavior preserved (no tools, Phase 0 persona)
+    ok 2 - without a toolContext: Phase 0 behavior preserved (no tools, Phase 0 persona)
+      ---
+      duration_ms: 0.810399
+      type: 'test'
+      ...
+    1..2
+ok 10 - runVoiceCall — Phase 1 session.update with tools + voice
+  ---
+  duration_ms: 3.186601
+  type: 'suite'
+  ...
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.642Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.643Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.644Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.644Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":true,"tool_count":8}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.644Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.644Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.644Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.function_call_arguments.done"}
+# {"event":"voice_call_tool_invoked","at":"2026-10-04T04:03:59.644Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tool":"book_appointment","ok":false,"ms":0}
+# {"event":"voice_call_tool_failed","at":"2026-10-04T04:03:59.644Z","severity":"warn","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tool":"book_appointment","error":"input_validation_failed: bad"}
+# Subtest: runVoiceCall — function-call loop (streaming-done variant)
+    # Subtest: runs the tool, sends function_call_output + response.create, does NOT end the call
+    ok 1 - runs the tool, sends function_call_output + response.create, does NOT end the call
+      ---
+      duration_ms: 5.467673
+      type: 'test'
+      ...
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.646Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.647Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.647Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.648Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":true,"tool_count":8}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.648Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.648Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.649Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"function_call\\",\\"content_types\\":[]}]"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.649Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.function_call","tool_calls":1}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.649Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":0,"saw_goodbye":false,"tool_call_turn":true}
+# {"event":"voice_call_tool_invoked","at":"2026-10-04T04:03:59.650Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tool":"look_up_availability","ok":true,"ms":1}
+    # Subtest: a failed tool call feeds an error payload back (call still continues)
+    ok 2 - a failed tool call feeds an error payload back (call still continues)
+      ---
+      duration_ms: 4.180346
+      type: 'test'
+      ...
+    1..2
+ok 11 - runVoiceCall — function-call loop (streaming-done variant)
+  ---
+  duration_ms: 10.002659
+  type: 'suite'
+  ...
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.654Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.660Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.660Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.667Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":true,"tool_count":8}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.667Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.667Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.668Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.function_call_arguments.done"}
+# {"event":"voice_call_tool_invoked","at":"2026-10-04T04:03:59.668Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tool":"book_appointment","ok":true,"ms":0}
+# Subtest: runVoiceCall — function-call loop (terminal response.done variant + dedupe)
+    # Subtest: response.done with a function_call output runs the tool and does NOT end the call
+    ok 1 - response.done with a function_call output runs the tool and does NOT end the call
+      ---
+      duration_ms: 12.62001
+      type: 'test'
+      ...
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.673Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"function_call\\",\\"content_types\\":[]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.673Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":0,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.676Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.678Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.679Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.680Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.680Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.682Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.682Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.function_call_arguments.done"}
+    # Subtest: same call_id on BOTH streaming-done AND terminal response.done runs ONCE (no double-book)
+    ok 2 - same call_id on BOTH streaming-done AND terminal response.done runs ONCE (no double-book)
+      ---
+      duration_ms: 17.641858
+      type: 'test'
+      ...
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.690Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.693Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.694Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.694Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.694Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.694Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.694Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"input_audio_buffer.committed"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.694Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.695Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.695Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.695Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.695Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.695Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.695Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"input_audio_buffer.speech_stopped"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.695Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.696Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.696Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.696Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.696Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.696Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.696Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.output_text.done","text_len":16}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.696Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.697Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.697Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.697Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.697Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.697Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.697Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.text.done","text_len":17}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.698Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.698Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.698Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.698Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.699Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.699Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.699Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.output_text.done","text_len":0}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.699Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.699Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.699Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.699Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.699Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.699Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.700Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.output_text.done","text_len":17}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.700Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.700Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.700Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.700Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.700Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.700Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.700Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.output_text.done","text_len":12}
+# {"event":"voice_call_goodbye_detected","at":"2026-10-04T04:03:59.700Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.701Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.701Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":true,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.701Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:03:59.701Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"test-response"}
+    # Subtest: tools are NOT dispatched when no toolContext is set (Phase 0 calls ignore function_call events)
+    ok 3 - tools are NOT dispatched when no toolContext is set (Phase 0 calls ignore function_call events)
+      ---
+      duration_ms: 12.912069
+      type: 'test'
+      ...
+    1..3
+ok 12 - runVoiceCall — function-call loop (terminal response.done variant + dedupe)
+  ---
+  duration_ms: 43.955737
+  type: 'suite'
+  ...
+# Subtest: buildCallerTranscriptionRequest — exact wire shape
+    # Subtest: returns a text-only response.create with conversation:none
+    ok 1 - returns a text-only response.create with conversation:none
+      ---
+      duration_ms: 1.979665
+      type: 'test'
+      ...
+    1..1
+ok 13 - buildCallerTranscriptionRequest — exact wire shape
+  ---
+  duration_ms: 2.16601
+  type: 'suite'
+  ...
+# Subtest: runVoiceCall — out-of-band transcription trigger
+    # Subtest: input_audio_buffer.committed sends a response.create with conversation:none
+    ok 1 - input_audio_buffer.committed sends a response.create with conversation:none
+      ---
+      duration_ms: 1.411825
+      type: 'test'
+      ...
+    # Subtest: input_audio_buffer.speech_stopped does NOT send (logs only)
+    ok 2 - input_audio_buffer.speech_stopped does NOT send (logs only)
+      ---
+      duration_ms: 0.946321
+      type: 'test'
+      ...
+    1..2
+ok 14 - runVoiceCall — out-of-band transcription trigger
+  ---
+  duration_ms: 2.565025
+  type: 'suite'
+  ...
+# Subtest: runVoiceCall — out-of-band transcription capture (output_text)
+    # Subtest: response.output_text.done with text routes it to onUserTurn
+    ok 1 - response.output_text.done with text routes it to onUserTurn
+      ---
+      duration_ms: 1.113631
+      type: 'test'
+      ...
+    # Subtest: response.text.done (beta event name) also routes to onUserTurn
+    ok 2 - response.text.done (beta event name) also routes to onUserTurn
+      ---
+      duration_ms: 1.139011
+      type: 'test'
+      ...
+    # Subtest: empty transcript text does NOT call onUserTurn
+    ok 3 - empty transcript text does NOT call onUserTurn
+      ---
+      duration_ms: 0.765389
+      type: 'test'
+      ...
+    # Subtest: accumulates output_text.delta and finalizes on .done when .done has no text
+    ok 4 - accumulates output_text.delta and finalizes on .done when .done has no text
+      ---
+      duration_ms: 0.91807
+      type: 'test'
+      ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.707Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.707Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.708Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.708Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.708Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.708Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.708Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.708Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.708Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.708Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:03:59.708Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"test-response"}
+    # Subtest: a goodbye in the caller transcript ends the call after the next assistant audio turn
+    ok 5 - a goodbye in the caller transcript ends the call after the next assistant audio turn
+      ---
+      duration_ms: 7.058462
+      type: 'test'
+      ...
+    1..5
+ok 15 - runVoiceCall — out-of-band transcription capture (output_text)
+  ---
+  duration_ms: 11.550058
+  type: 'suite'
+  ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.710Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.710Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.710Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.711Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.711Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.711Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.711Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.711Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"text\\"]}]"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.711Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.out_of_band_transcription"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.712Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.out_of_band_transcription"}
+# Subtest: runVoiceCall — response.done guard (out-of-band text vs assistant audio)
+    # Subtest: an AUDIO response.done counts as an assistant turn (existing behavior)
+    ok 1 - an AUDIO response.done counts as an assistant turn (existing behavior)
+      ---
+      duration_ms: 2.68291
+      type: 'test'
+      ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.770Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"timeout"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.771Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"timeout"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.771Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.772Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.772Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.772Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.772Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.772Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.output_text.done","text_len":7}
+# {"event":"voice_call_goodbye_detected","at":"2026-10-04T04:03:59.772Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.772Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"output_text\\"]}]"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.772Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.out_of_band_transcription"}
+    # Subtest: a TEXT-ONLY (out-of-band) response.done does NOT count as an assistant turn
+    ok 2 - a TEXT-ONLY (out-of-band) response.done does NOT count as an assistant turn
+      ---
+      duration_ms: 60.712045
+      type: 'test'
+      ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.832Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"timeout"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.832Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"timeout"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.838Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.839Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.839Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.839Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.839Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.839Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.output_audio_transcript.done"}
+# {"event":"voice_call_goodbye_detected","at":"2026-10-04T04:03:59.839Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","side":"agent"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.839Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.839Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":true,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.839Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:03:59.839Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"test-response"}
+    # Subtest: a text-only (output_text) response.done does NOT end the call even after a goodbye
+    ok 3 - a text-only (output_text) response.done does NOT end the call even after a goodbye
+      ---
+      duration_ms: 61.376858
+      type: 'test'
+      ...
+    1..3
+ok 16 - runVoiceCall — response.done guard (out-of-band text vs assistant audio)
+  ---
+  duration_ms: 125.308844
+  type: 'suite'
+  ...
+# Subtest: CALLER_GOODBYE_RE — broadened caller sign-off detection
+    # Subtest: still matches the original alternatives
+    ok 1 - still matches the original alternatives
+      ---
+      duration_ms: 0.378254
+      type: 'test'
+      ...
+    # Subtest: matches natural caller sign-offs added in FIX 2
+    ok 2 - matches natural caller sign-offs added in FIX 2
+      ---
+      duration_ms: 0.208869
+      type: 'test'
+      ...
+    # Subtest: does NOT match ordinary mid-call speech
+    ok 3 - does NOT match ordinary mid-call speech
+      ---
+      duration_ms: 0.222121
+      type: 'test'
+      ...
+    1..3
+ok 17 - CALLER_GOODBYE_RE — broadened caller sign-off detection
+  ---
+  duration_ms: 0.999963
+  type: 'suite'
+  ...
+# Subtest: AGENT_SIGNOFF_RE — agent closing-line detection (narrow)
+    # Subtest: matches clear agent closings
+    ok 1 - matches clear agent closings
+      ---
+      duration_ms: 0.838797
+      type: 'test'
+      ...
+    # Subtest: does NOT match a booking CONFIRMATION (must not end mid-confirm)
+    ok 2 - does NOT match a booking CONFIRMATION (must not end mid-confirm)
+      ---
+      duration_ms: 0.687871
+      type: 'test'
+      ...
+    1..2
+ok 18 - AGENT_SIGNOFF_RE — agent closing-line detection (narrow)
+  ---
+  duration_ms: 1.650405
+  type: 'suite'
+  ...
+# Subtest: hangupCall — POSTs to the SIP hangup endpoint
+    # Subtest: POSTs to /v1/realtime/calls/<id>/hangup with Authorization: Bearer <key>
+    ok 1 - POSTs to /v1/realtime/calls/<id>/hangup with Authorization: Bearer <key>
+      ---
+      duration_ms: 0.885822
+      type: 'test'
+      ...
+    # Subtest: URL-encodes the call id
+    ok 2 - URL-encodes the call id
+      ---
+      duration_ms: 0.666039
+      type: 'test'
+      ...
+    # Subtest: a non-2xx response surfaces ok:false with the status (never throws)
+    ok 3 - a non-2xx response surfaces ok:false with the status (never throws)
+      ---
+      duration_ms: 0.435965
+      type: 'test'
+      ...
+    # Subtest: a fetch throw is swallowed → { ok:false, status:0 } (best-effort)
+    ok 4 - a fetch throw is swallowed → { ok:false, status:0 } (best-effort)
+      ---
+      duration_ms: 0.438756
+      type: 'test'
+      ...
+    1..4
+ok 19 - hangupCall — POSTs to the SIP hangup endpoint
+  ---
+  duration_ms: 2.680051
+  type: 'suite'
+  ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.847Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.847Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.848Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.848Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.848Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.848Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.848Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.848Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.audio_transcript.done"}
+# {"event":"voice_call_goodbye_detected","at":"2026-10-04T04:03:59.848Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","side":"agent"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.848Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.848Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":true,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.848Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:03:59.848Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"test-response"}
+# Subtest: runVoiceCall — agent sign-off ends the call
+    # Subtest: an assistant 'have a great day' transcript ends the call (goodbye) on the next response.done
+    ok 1 - an assistant 'have a great day' transcript ends the call (goodbye) on the next response.done
+      ---
+      duration_ms: 9.05232
+      type: 'test'
+      ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.849Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.850Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.850Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.850Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.850Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.850Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.850Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.850Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.output_audio_transcript.done"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.851Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.851Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":false,"tool_call_turn":false}
+    # Subtest: the beta event name response.audio_transcript.done also triggers agent sign-off
+    ok 2 - the beta event name response.audio_transcript.done also triggers agent sign-off
+      ---
+      duration_ms: 2.542835
+      type: 'test'
+      ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.900Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"timeout"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.901Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"timeout"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.902Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.902Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.902Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.902Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.902Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.902Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.903Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.903Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.903Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.903Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.903Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+    # Subtest: an agent CONFIRMATION ('you're all set for Friday') does NOT end the call
+    ok 3 - an agent CONFIRMATION ('you're all set for Friday') does NOT end the call
+      ---
+      duration_ms: 51.139323
+      type: 'test'
+      ...
+    1..3
+ok 20 - runVoiceCall — agent sign-off ends the call
+  ---
+  duration_ms: 63.231608
+  type: 'suite'
+  ...
+# Subtest: runVoiceCall — finish() requests a SIP hangup only for self-initiated ends
+    # Subtest: a caller hang-up (ws close → ws_closed) does NOT request a hangup
+    ok 1 - a caller hang-up (ws close → ws_closed) does NOT request a hangup
+      ---
+      duration_ms: 1.048939
+      type: 'test'
+      ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.924Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"timeout"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.924Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"timeout"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.925Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.925Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.925Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.925Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.925Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.925Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.926Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.926Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:03:59.926Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"test-response"}
+    # Subtest: a timeout finish DOES request a hangup (we initiated the end)
+    ok 2 - a timeout finish DOES request a hangup (we initiated the end)
+      ---
+      duration_ms: 22.09198
+      type: 'test'
+      ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.926Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.927Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.927Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_upgrade_rejected","at":"2026-10-04T04:03:59.928Z","severity":"error","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","http_status":401,"http_status_text":"Unauthorized","server":null,"openai_request_id":null,"cf_ray":null,"content_type":null,"body":null}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.928Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"open_failed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.930Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_ws_opened","at":"2026-10-04T04:03:59.930Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_update_sent","at":"2026-10-04T04:03:59.930Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","tools_enabled":false,"tool_count":0}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.930Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_first_response_requested","at":"2026-10-04T04:03:59.930Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_session_updated","at":"2026-10-04T04:03:59.930Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.930Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.931Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.931Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"conversation.item.input_audio_transcription.completed","transcript_len":7}
+# {"event":"voice_call_goodbye_detected","at":"2026-10-04T04:03:59.931Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.931Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"output_audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.931Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":true,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.931Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+    # Subtest: a max_turns finish DOES request a hangup
+    ok 3 - a max_turns finish DOES request a hangup
+      ---
+      duration_ms: 2.024035
+      type: 'test'
+      ...
+    # Subtest: an open_failed finish does NOT request a hangup (no session to tear down)
+    ok 4 - an open_failed finish does NOT request a hangup (no session to tear down)
+      ---
+      duration_ms: 0.927841
+      type: 'test'
+      ...
+    1..4
+ok 21 - runVoiceCall — finish() requests a SIP hangup only for self-initiated ends
+  ---
+  duration_ms: 26.676694
+  type: 'suite'
+  ...
+# Subtest: SIP persona initialization
+    # Subtest: disables turn detection until the control connection configures the persona
+    ok 1 - disables turn detection until the control connection configures the persona
+      ---
+      duration_ms: 1.062132
+      type: 'test'
+      ...
+    # Subtest: waits for session.updated and greets exactly once
+    ok 2 - waits for session.updated and greets exactly once
+      ---
+      duration_ms: 1.091437
+      type: 'test'
+      ...
+    1..2
+ok 22 - SIP persona initialization
+  ---
+  duration_ms: 2.369085
+  type: 'suite'
+  ...
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:03:59.957Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"closing"}
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.959Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.959Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.960Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.960Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"conversation.item.input_audio_transcription.completed","transcript_len":7}
+# {"event":"voice_call_goodbye_detected","at":"2026-10-04T04:03:59.960Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.960Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"output_audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.960Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":true,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.960Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:03:59.960Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"closing"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:03:59.960Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"closing"}
+# Subtest: SIP farewell playback
+    # Subtest: does not hang up at generation completion; waits for matching playback drain
+    ok 1 - does not hang up at generation completion; waits for matching playback drain
+      ---
+      duration_ms: 28.794901
+      type: 'test'
+      ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.961Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.961Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.962Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.962Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"conversation.item.input_audio_transcription.completed","transcript_len":7}
+# {"event":"voice_call_goodbye_detected","at":"2026-10-04T04:03:59.962Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.962Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"output_audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.963Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":true,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.963Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+    # Subtest: duplicate playback events request just one hangup
+    ok 2 - duplicate playback events request just one hangup
+      ---
+      duration_ms: 1.787913
+      type: 'test'
+      ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:03:59.963Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.964Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.964Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.964Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"conversation.item.input_audio_transcription.completed","transcript_len":7}
+# {"event":"voice_call_goodbye_detected","at":"2026-10-04T04:03:59.964Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.964Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"output_audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.964Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":true,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.964Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+    # Subtest: drain arriving before response.done is remembered
+    ok 3 - drain arriving before response.done is remembered
+      ---
+      duration_ms: 2.362576
+      type: 'test'
+      ...
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.980Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:03:59.981Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.981Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"conversation.item.input_audio_transcription.completed","transcript_len":7}
+# {"event":"voice_call_goodbye_detected","at":"2026-10-04T04:03:59.981Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:03:59.981Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"output_audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:03:59.981Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":true,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:03:59.981Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:03:59.981Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+    # Subtest: caller interruption cancels pending farewell hangup
+    ok 4 - caller interruption cancels pending farewell hangup
+      ---
+      duration_ms: 16.485541
+      type: 'test'
+      ...
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:04:00.012Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:04:00.012Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"conversation.item.input_audio_transcription.completed","transcript_len":7}
+# {"event":"voice_call_goodbye_detected","at":"2026-10-04T04:04:00.013Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:04:00.013Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"output_audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:04:00.013Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":true,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:04:00.013Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+    # Subtest: caller disconnect clears the pending hangup timer
+    ok 5 - caller disconnect clears the pending hangup timer
+      ---
+      duration_ms: 31.305426
+      type: 'test'
+      ...
+# {"event":"voice_call_playback_wait_timeout","at":"2026-10-04T04:04:00.033Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:04:00.033Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:04:00.033Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:04:00.033Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:04:00.034Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"output_audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:04:00.034Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":false,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:04:00.034Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:04:00.034Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"closing"}
+    # Subtest: missing playback event has a bounded fallback
+    ok 6 - missing playback event has a bounded fallback
+      ---
+      duration_ms: 21.188951
+      type: 'test'
+      ...
+# {"event":"voice_call_hangup_requested","at":"2026-10-04T04:04:00.036Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:04:00.036Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"max_turns"}
+# {"event":"voice_call_ws_connecting","at":"2026-10-04T04:04:00.036Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","ws_url":"wss://api.openai.com/v1/realtime?call_id=rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:04:00.036Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"conversation.item.input_audio_transcription.completed","transcript_len":7}
+# {"event":"voice_call_goodbye_detected","at":"2026-10-04T04:04:00.036Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001"}
+# {"event":"voice_call_realtime_event","at":"2026-10-04T04:04:00.037Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","event_type":"response.done.output_shape","output_types":"[{\\"type\\":\\"message\\",\\"content_types\\":[\\"output_audio\\"]}]"}
+# {"event":"voice_call_response_done","at":"2026-10-04T04:04:00.037Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","assistant_turns":1,"saw_goodbye":true,"tool_call_turn":false}
+# {"event":"voice_call_waiting_for_playback","at":"2026-10-04T04:04:00.037Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"goodbye"}
+# {"event":"voice_call_playback_drained","at":"2026-10-04T04:04:00.037Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","response_id":"closing"}
+    # Subtest: turn cap also lets audio finish
+    ok 7 - turn cap also lets audio finish
+      ---
+      duration_ms: 2.632564
+      type: 'test'
+      ...
+# {"event":"voice_call_ws_closed","at":"2026-10-04T04:04:00.097Z","severity":"info","request_id":null,"identity_kind":null,"org_id":null,"status":null,"duration_ms":null,"call_id":"rtc_test_call_0001","reason":"ws_closed"}
+    # Subtest: keeps a short grace period after playback and allows interruption during it
+    ok 8 - keeps a short grace period after playback and allows interruption during it
+      ---
+      duration_ms: 62.023438
+      type: 'test'
+      ...
+    1..8
+ok 23 - SIP farewell playback
+  ---
+  duration_ms: 167.741044
+  type: 'suite'
+  ...
+1..23
+# tests 67
+# suites 23
+# pass 67
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 30386.456782

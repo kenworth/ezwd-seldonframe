@@ -1,0 +1,8 @@
+Goodbye playback fix, 2026-10-04 UTC
+Live image: seldonframe-ezwd:photos-v8-voice-playback-20261004
+Base: seldonframe-ezwd:photos-v8-voice-delay-20261004
+Bug confirmed: response.done at 04:00:21.982Z, SIP hangup at 04:00:21.983Z before buffered audio finished.
+Change: goodbye and turn-cap endings wait for matching output_audio_buffer.stopped, then 250ms grace. User speech cancels pending goodbye. 30-second missing-event fallback and existing call-duration cap remain. Close clears pending timer. Duplicate/stale playback events do not trigger extra hangups.
+Validation: 67 source voice tests, 10 compiled-runtime checks, full pnpm build (4 tasks), staged login200/webhookGET405. Production healthy. Real phone test pending.
+Source, patched runtime chunks, tests, build logs, and compose backup retained here.
+Rollback: replace only image seldonframe-ezwd:photos-v8-voice-playback-20261004 with seldonframe-ezwd:photos-v8-voice-delay-20261004 in /root/seldonframe/docker-compose.yml, then docker compose up -d --no-deps --wait app in /root/seldonframe. Preserve later changes; do not blindly restore full backup.

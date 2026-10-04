@@ -1,0 +1,53 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.v2
+#1 transferring dockerfile: 487B 0.0s done
+#1 DONE 0.2s
+
+#2 [internal] load metadata for docker.io/library/seldonframe-ezwd:sek-voice-session-fix-ready-20261002
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B 0.0s done
+#3 DONE 0.2s
+
+#4 [internal] load build context
+#4 transferring context: 174.22kB 0.1s done
+#4 DONE 0.3s
+
+#5 [1/5] FROM docker.io/library/seldonframe-ezwd:sek-voice-session-fix-ready-20261002@sha256:2bf3fbf6e65612a7474f5588b2e5a2d06de752fbd28aa18d28db7ded9744e403
+#5 resolve docker.io/library/seldonframe-ezwd:sek-voice-session-fix-ready-20261002@sha256:2bf3fbf6e65612a7474f5588b2e5a2d06de752fbd28aa18d28db7ded9744e403
+#5 resolve docker.io/library/seldonframe-ezwd:sek-voice-session-fix-ready-20261002@sha256:2bf3fbf6e65612a7474f5588b2e5a2d06de752fbd28aa18d28db7ded9744e403 0.6s done
+#5 DONE 0.6s
+
+#5 [1/5] FROM docker.io/library/seldonframe-ezwd:sek-voice-session-fix-ready-20261002@sha256:2bf3fbf6e65612a7474f5588b2e5a2d06de752fbd28aa18d28db7ded9744e403
+#5 DONE 0.6s
+
+#5 [1/5] FROM docker.io/library/seldonframe-ezwd:sek-voice-session-fix-ready-20261002@sha256:2bf3fbf6e65612a7474f5588b2e5a2d06de752fbd28aa18d28db7ded9744e403
+#5 CACHED
+
+#6 [2/5] COPY realtime.fixed.ts /app/packages/crm/src/lib/agents/voice/openai-realtime.ts
+#6 DONE 0.8s
+
+#7 [3/5] COPY voice-a.fixed.js /app/packages/crm/.next/server/chunks/packages_crm_src_lib_agents_voice_0whxmmx._.js
+#7 DONE 0.4s
+
+#8 [4/5] COPY voice-b.fixed.js /app/packages/crm/.next/server/chunks/packages_crm_src_lib_agents_voice_0_v.450._.js
+#8 DONE 0.4s
+
+#9 [5/5] COPY voice-tests.fixed.ts /app/packages/crm/tests/unit/agents/voice/run-voice-call.spec.ts
+#9 DONE 0.2s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.7s done
+#10 exporting manifest sha256:21f97672fe16ef89b3ec28d211bde98f7b69d9273e41cec919f30bd88329d427 0.0s done
+#10 exporting config sha256:f9220f781ca54e1067e8f32e66be405745276d54fc7381957f53c76632c1584c 0.0s done
+#10 exporting attestation manifest sha256:5f8410c734ee1c7d5fab4d105c080737359def96bf3046baa4291b64b603b951
+#10 exporting attestation manifest sha256:5f8410c734ee1c7d5fab4d105c080737359def96bf3046baa4291b64b603b951 0.1s done
+#10 exporting manifest list sha256:9b673bd6fb018cfb81854216f1b0fa2257129bf9b806c91de63c357a89e7a98d 0.1s done
+#10 naming to docker.io/library/seldonframe-ezwd:sek-voice-init-fix-20261003
+#10 naming to docker.io/library/seldonframe-ezwd:sek-voice-init-fix-20261003 done
+#10 unpacking to docker.io/library/seldonframe-ezwd:sek-voice-init-fix-20261003
+#10 unpacking to docker.io/library/seldonframe-ezwd:sek-voice-init-fix-20261003 0.5s done
+#10 DONE 2.6s

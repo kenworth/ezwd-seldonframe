@@ -1,0 +1,29 @@
+{
+    email <email>
+}
+
+http://SERVER_IP {
+    reverse_proxy app:3000
+}
+
+http://ai.ezwderp.com {
+    redir https://ai.ezwderp.com{uri} permanent
+}
+
+https://ai.ezwderp.com {
+    # Compress text, JavaScript, CSS, JSON and HTML for browser clients.
+    encode zstd gzip
+    log {
+        output file /var/log/caddy/access.json
+        format json
+    }
+    @first_login {
+        path /login
+        not header Cookie *ezwd_cache_reset=1*
+    }
+    header @first_login {
+        Clear-Site-Data "\"cache\""
+        Set-Cookie "ezwd_cache_reset=1; Max-Age=31536000; Path=/; Secure; SameSite=Lax"
+    }
+    reverse_proxy app:3000
+}

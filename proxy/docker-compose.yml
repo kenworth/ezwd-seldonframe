@@ -1,0 +1,23 @@
+services:
+  caddy:
+    image: caddy:2
+    container_name: seldonframe-caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      seldonframe:
+
+networks:
+  seldonframe:
+    external: true
+    name: fubbrjt4nkczuv0wjcyitkan
+
+volumes:
+  caddy_data:
+  caddy_config:

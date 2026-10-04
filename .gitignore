@@ -1,0 +1,10 @@
+# never commit real environment files
+.env
+.env.*
+!.env.example
+# local artifacts
+backups/
+*.dump
+node_modules/
+.next/
+*.tmp

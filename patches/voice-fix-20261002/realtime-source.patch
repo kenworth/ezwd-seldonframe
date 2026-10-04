@@ -1,0 +1,82 @@
+--- a/packages/crm/src/lib/agents/voice/openai-realtime.ts
++++ b/packages/crm/src/lib/agents/voice/openai-realtime.ts
+@@ -393,6 +393,8 @@
+     // Silent at accept — greet once over the WS (in the right voice). See
+     // PHASE0_ACCEPT_INSTRUCTIONS for why this isn't the greeting persona.
+     instructions: PHASE0_ACCEPT_INSTRUCTIONS,
++    // Prevent caller speech from triggering default audio before persona setup.
++    audio: { input: { turn_detection: null } },
+   };
+ 
+   try {
+@@ -838,6 +840,27 @@
+       send({ type: "response.create" });
+     };
+ 
++    let greetingRequested = false;
++    const greetAfterSessionReady = () => {
++      if (greetingRequested) return;
++      greetingRequested = true;
++      // Make the agent speak first — the warm greeting. Without this the agent
++      // waits for the caller to speak, which feels broken on an "it answered
++      // and greeted me" validation. PHASE 2: when the workspace set a custom
++      // greeting (blueprint.greeting via the editor), the agent opens with it;
++      // otherwise a generic warm greeting.
++      const greeting = params.greeting?.trim();
++      send({
++        type: "response.create",
++        response: {
++          instructions: greeting
++            ? `Open the call by delivering this greeting in your own natural, warm voice: "${greeting}". Then briefly ask how you can help. Keep it to one or two short sentences.`
++            : "Greet the caller warmly as the receptionist and ask how you can help. Keep it to one or two short sentences.",
++        },
++      });
++      logEvent("voice_call_first_response_requested", { call_id: params.callId });
++    };
++
+     ws.addEventListener("open", () => {
+       logEvent("voice_call_ws_opened", { call_id: params.callId });
+ 
+@@ -894,27 +917,13 @@
+         session.tool_choice = "auto";
+       }
+       send({ type: "session.update", session });
+-      logEvent("voice_call_session_updated", {
++      logEvent("voice_call_session_update_sent", {
+         call_id: params.callId,
+         tools_enabled: toolsEnabled,
+         tool_count: toolsEnabled ? VOICE_TOOLS.length : 0,
+       });
+ 
+-      // Make the agent speak first — the warm greeting. Without this the agent
+-      // waits for the caller to speak, which feels broken on an "it answered
+-      // and greeted me" validation. PHASE 2: when the workspace set a custom
+-      // greeting (blueprint.greeting via the editor), the agent opens with it;
+-      // otherwise a generic warm greeting.
+-      const greeting = params.greeting?.trim();
+-      send({
+-        type: "response.create",
+-        response: {
+-          instructions: greeting
+-            ? `Open the call by delivering this greeting in your own natural, warm voice: "${greeting}". Then briefly ask how you can help. Keep it to one or two short sentences.`
+-            : "Greet the caller warmly as the receptionist and ask how you can help. Keep it to one or two short sentences.",
+-        },
+-      });
+-      logEvent("voice_call_first_response_requested", { call_id: params.callId });
++
+     });
+ 
+     ws.addEventListener("message", (ev: unknown) => {
+@@ -929,6 +938,12 @@
+       }
+ 
+       switch (msg.type) {
++        case "session.updated": {
++          logEvent("voice_call_session_updated", { call_id: params.callId });
++          greetAfterSessionReady();
++          break;
++        }
++
+         // PHASE 1 — streaming function-call completion. The model finished
+         // streaming this call's arguments; run it immediately (don't wait for
+         // response.done). Logged so we can confirm from the live call which
