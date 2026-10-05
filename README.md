@@ -12,7 +12,7 @@ including the database pooling fix. It does **not** contain the full SeldonFrame
 | Upstream repo | https://github.com/seldonframe/seldonframe |
 | Upstream HEAD at snapshot | `3f386a221849` (2026-08-24T09:53:17Z) |
 | Latest upstream release | v1.1.0 |
-| Image we run | `seldonframe-ezwd:pooling-source-v1-20261004` (custom build) |
+| Image we run | `seldonframe-ezwd:workspace-limits-v1-20261005` (custom build) |
 | License | **AGPL-3.0** (dual-licensed; see upstream `LICENSING.md`) |
 
 ### AGPL note — read before making this repo private-and-closed
@@ -75,6 +75,12 @@ See [the source overlay, build recipe, tests, and storage/rollback notes](patche
 The temporary compiled-code pooling transformer is no longer required. The customized
 base image must be available locally; this repository does not publish an image.
 The Compose file pins the original PostgreSQL volume as external.
+
+## Source-based workspace quota fix
+
+The workspace display and creation gate now share the current plan catalog, including
+Agency Scale and other unlimited tiers. The source patch survives rebuilds and preserves
+finite plan and client sub-account limits. See [the patch, regression tests, and rebuild/rollback instructions](patches/workspace-limits-20261005/README.md).
 
 ## Deploy / rollback
 

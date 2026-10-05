@@ -10,7 +10,7 @@ sources or compiled chunks, tests, build logs and a compose backup for rollback.
 | `app/ops/ezwd-origin-patch.js` (redirect origin) | `/switch-workspace` and friends redirect to `http://localhost:3000/...` behind the proxy | rewrite loopback origins to the canonical public origin | remove the `NODE_OPTIONS` preload from compose |
 | `app/ops/ezwd-origin-patch.js` (service photos) | every service card renders a striped `photo - <service>` placeholder when no Unsplash key is set | fall back to the app's curated `service_grid_image_urls` bundles | same |
 | `app/ops/ezwd-origin-patch.js` (image harvest) | a client site's own photos were dropped on the keyless fetch path | return `html` + `ogImage` from the fallback so the harvester sees them | same |
-| workspace cap (`agency_scale`) | paid `agency_*` plans were treated as 0 workspaces → upgrade notice | compiled gate treats `agency_*` as unlimited | revert image tag |
+| historical workspace cap (`agency_scale`) | paid `agency_*` plans were treated as 0 workspaces | superseded by the source-based catalog fix below | see source-patch rollback |
 
 ## Image-level (baked, pinned by tag)
 
@@ -35,3 +35,5 @@ sources or compiled chunks, tests, build logs and a compose backup for rollback.
 
 - [database-pooling-20261004/](database-pooling-20261004/README.md) — source overlay, Dockerfile,
   pooling regression test, database smoke check, validation results, and corrected external volume mapping.
+
+- [workspace-limits-20261005/](workspace-limits-20261005/README.md) — source-level catalog quota fix, shared display/creation checks, regression tests, and rebuild recipe. Image: `seldonframe-ezwd:workspace-limits-v1-20261005`.

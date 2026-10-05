@@ -117,7 +117,7 @@ services:
     - .env
   app:
     cpu_shares: 4096
-    image: seldonframe-ezwd:pooling-source-v1-20261004
+    image: seldonframe-ezwd:workspace-limits-v1-20261005
     pull_policy: never
     restart: unless-stopped
     command:
