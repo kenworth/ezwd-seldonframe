@@ -37,3 +37,5 @@ sources or compiled chunks, tests, build logs and a compose backup for rollback.
   pooling regression test, database smoke check, validation results, and corrected external volume mapping.
 
 - [workspace-limits-20261005/](workspace-limits-20261005/README.md) — source-level catalog quota fix, shared display/creation checks, regression tests, and rebuild recipe. Image: `seldonframe-ezwd:workspace-limits-v1-20261005`.
+
+- [booking-links-20261005/](booking-links-20261005/README.md) — shared public booking URL fix for quote confirmations, SMS, and generated CTAs. Image: `seldonframe-ezwd:booking-links-v1-20261005`.

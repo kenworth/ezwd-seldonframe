@@ -82,6 +82,13 @@ The workspace display and creation gate now share the current plan catalog, incl
 Agency Scale and other unlimited tiers. The source patch survives rebuilds and preserves
 finite plan and client sub-account limits. See [the patch, regression tests, and rebuild/rollback instructions](patches/workspace-limits-20261005/README.md).
 
+## Public booking links
+
+A tested source patch makes quote confirmations, follow-up texts, and generated
+booking URLs use the public booking path on the configured app origin. Deployment
+is pending; the current image pin above is unchanged. See
+[the source patch and regression tests](patches/booking-links-20261005/README.md).
+
 ## Deploy / rollback
 
 ```bash
